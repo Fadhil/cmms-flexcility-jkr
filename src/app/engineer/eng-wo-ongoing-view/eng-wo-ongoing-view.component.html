@@ -1,0 +1,115 @@
+<div class="row">    
+  <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Work Order Title</strong>
+          </div>
+          <div class="card-block">
+            <div class="row" align="center">
+              <div class="col-sm-8">
+                <img width="240px" src="https://d284x0ytlho6sy.cloudfront.net/images/CPC/55/Customliquidthumb.jpg"/>
+              </div>
+            </div>
+            <br/>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Priority</strong></label>
+              <div class="col-md-9">
+                <span class="badge badge-danger">High</span>
+              </div>
+            </div> 
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Status</strong></label>
+              <div class="col-md-9">
+                <span class="badge badge-warning">IN PROGRESS</span>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Work Order ID</strong></label>
+              <div class="col-md-9">
+                WO-101
+              </div>
+            </div>        
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type"><strong>Work Order Details</strong></label>
+              <div class="col-md-9" >
+                PC tidak boleh dihidupkan
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Site</strong></label>
+              <div class="col-md-9">
+                Wilayah Persekutuan
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Building</strong></label>
+              <div class="col-md-9">
+                Building B
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Area</strong></label>
+              <div class="col-md-9">
+                Area B
+              </div>
+            </div>  
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Date</strong></label>
+              <div class="col-md-9">
+                2012/01/01
+              </div>
+            </div>  
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Time</strong></label>
+              <div class="col-md-9">
+                9.40 AM
+              </div>
+            </div> 
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Job Trait</strong></label>
+              <div class="col-md-9">
+                Electrical
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Job type</strong></label>
+              <div class="col-md-9">
+                Corrective Maintenance
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>Person In charge</strong></label>
+              <div class="col-md-9">
+                <a href="http://localhost:4200/#/admin/user/view" >Rohamnuddin</a>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait"><strong>verify by</strong></label>
+              <div class="col-md-9">
+                <a href="http://localhost:4200/#/admin/user/view" >Rahman Taib</a> 
+              </div>
+            </div>
+        </div>
+        </div>
+      </div><!--/.col-->
+  </div>
+  
+  <div bsModal #dangerModal2="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-danger" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Delete User</h4>
+          <button type="button" class="close" (click)="dangerModal2.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Sure want to delete?&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="dangerModal2.hide()">Close</button>
+          <button type="button" class="btn btn-primary" [routerLink]="['/engineer/ongoingworkorder/']" >Delete</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->

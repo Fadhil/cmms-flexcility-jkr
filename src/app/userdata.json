@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "email": "admin@flexcility.com",
+        "password": "admin@flex",
+        "department": "Human Resource",
+        "no_phone":"0133422091",
+        "username":"Admin bin Tahier",
+        "role": "Admin",
+        "date": "28/05/2017"
+    },
+    {
+        "id": 2,
+        "email": "zila@flexcility.com",
+        "password": "zila@flex",
+        "department": "Human Resource",
+        "no_phone":"014435678",
+        "username":"Fadzilla",
+        "role": "Admin",
+        "date": "13/05/2017"
+    },
+    {
+        "id": 3,
+        "email": "haziq@flexcility.com",
+        "password": "haziq@flex",
+        "department": "Information Technology",
+        "no_phone":"0133462327",
+        "username":"Haziq Azmi",
+        "role": "Engineer",
+        "date": "21/05/2016"
+    },
+    {
+        "id": 4,
+        "email": "fadhil@flexcility.com",
+        "password": "fadhil@flex",
+        "department": "Manager",
+        "no_phone":"0144673923",
+        "username":"Fadhil Luqman",
+        "role": "Technician",
+        "date": "31/01/2017"
+    },
+    {
+        "id": 5,
+        "email": "zaman@gmail.com",
+        "password": "zaman@flex",
+        "department": "client",
+        "no_phone":"0119191",
+        "username":"Zaman Tajul",
+        "role": "Admin",
+        "date": "14/03/2017"
+    }
+]

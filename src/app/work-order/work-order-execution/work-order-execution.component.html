@@ -1,0 +1,250 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Work Order Completion</strong>
+        </div>
+
+        <div class="card-block">
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait">Action Taken</label>
+            <div class="col-md-9">
+              <select id="job_trait" name="job_trait" class="form-control">
+                <option value="0">Repair</option>
+                <option value="1">Clean</option>
+                <option value="2">Replace</option>
+                <option value="3">Testing and Commissioning</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="action_description">Action Description:</label>
+                <textarea id="action_description" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>
+
+              </div>
+            </div>
+          </div><!--/.row-->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="action_description">Spare Parts/Consumables:</label>
+                <div class="row">
+                  <div class="col-sm-4">
+                    Part Name
+
+                    <input type="text" class="form-control" id="part1" placeholder="Enter part name">
+
+                    <input type="text" class="form-control" id="part2" placeholder="Enter part name">
+
+                    <input type="text" class="form-control" id="part3" placeholder="Enter part name">
+                  </div>
+                  <div class="col-sm-4">
+                    Part Code
+
+                    <input type="text" class="form-control" id="part_code1" placeholder="Enter part code">
+
+                    <input type="text" class="form-control" id="part_code2" placeholder="Enter part code">
+
+                    <input type="text" class="form-control" id="part_code3" placeholder="Enter part code">
+                  </div>
+                  <div class="col-sm-4">
+                    Quantity
+
+                    <input type="text" class="form-control" id="part_quantity1" placeholder="Enter quantity">
+
+                    <input type="text" class="form-control" id="part_quantity2" placeholder="Enter quantity">
+
+                    <input type="text" class="form-control" id="part_quantity3" placeholder="Enter quantity">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div><!--/.row-->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="cost_of_work">Cost of Work</label>
+                <input type="text" class="form-control" id="cost_of_work" placeholder="Enter total cost">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="name"><strong>Work verified by:</strong></label>
+                Ir. Harris Khalid
+              </div>
+            </div>
+          </div><!--/.row-->
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="file-input">Image Upload</label>
+            <div class="col-md-9">
+              <input type="file" id="file-input" name="file-input">
+            </div>
+          </div>
+
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders/report']">Close Work Order</button>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Requester Information
+        </div>
+        <div class="card-block">
+          <table>
+            <tr>
+              <th>Staff ID:</th><td>87223</td>
+            </tr>
+            <tr>
+              <th>Department:</th><td>Human Resource</td>
+            </tr>
+            <tr>
+              <th>Name:</th><td>Pn Roslina Jamil</td>
+            </tr>
+            <tr>
+              <th>Phone Number:</th><td>0108878288 </td>
+            </tr>
+            <tr>
+              <th>Email:</th><td>r.jamil@gmail.com </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><!--/.col-->
+
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Work Request Information
+        </div>
+        <div class="card-block">
+          <tr>
+            <th>Building:</th><td>Mahkamah Persekutuan Kuala Lumpur</td>
+          </tr>
+          <tr>
+            <th>Block:</th><td>G-2</td>
+          </tr>
+          <hr/>
+          <tr>
+            <th>Request Details:</th><td>Aircond tidak berfungsi. Angin ada, tapi tidak sejuk</td>
+          </tr>
+
+        </div>
+      </div>
+    </div><!--/.col-->
+
+  </div><!--/.row-->
+  <div class="row">
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Work Order Number - MT-M-0182</strong>
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-6">
+              <img width="240px" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/175/cache/room-air-conditioner_17521_600x450.jpg"/>
+            </div>
+          </div>
+          <br/>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Job Trait</strong></label>
+            <div class="col-md-9">
+              Electrical
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Job Type</strong></label>
+            <div class="col-md-9">
+              Corrective Maintenance
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type">High Priority</label>
+            <div class="col-md-9">
+              Yes
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type">Assigned To</label>
+            <div class="col-md-9">
+              En. Rodham Abu Bakar
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Verification</strong>
+        </div>
+
+        <div class="card-block">
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label" for="request_time"><strong>Requested On:</strong></label>
+            <div class="col-md-8">
+              11/05/2017 - 9.48am
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label" for="request_time"><strong>Person In Charge:</strong></label>
+            <div class="col-md-8">
+              Ir. Harris Khalid
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label"><strong>Verified by:</strong></label>
+
+            <div class="col-md-8">
+              En. Rodham Abu Bakar
+              <br/>
+              via Visual Inspection
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label"><strong>Comments:</strong></label>
+
+            <div class="col-md-8">
+              Potential Leaks
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label" for="verified_time"><strong>Verified On:</strong></label>
+            <div class="col-md-8">
+              11/05/2017 - 10.28am
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label" for="job_type"><strong>Assigned To:</strong></label>
+            <div class="col-md-8">
+
+
+                Pn. Maizatul Faris
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-md-4 form-control-label" for="job_type"><strong>Estimated Hours:</strong></label>
+            <div class="col-md-8">
+              2 Hrs
+            </div>
+          </div><!--/.row-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

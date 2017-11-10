@@ -1,0 +1,63 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Submit Request</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="form-group row">
+            <div class="col-md-8">
+                <label for="org_name">Photo:</label>
+				<image-upload></image-upload>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label for="org_name">Request ID:</label>
+                <input type="text" class="form-control" id="asset_id" placeholder="Asset ID">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Request Detail:</label>
+                <textarea class="form-control" id="request_detail" rows="4" placeholder="description"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="org_name">Site:</label>
+                  <select id="site_name" name="site_name" class="form-control"[(ngModel)]="siteValue" >
+                    <option value="0">Please select</option>
+                    <option value="wilayah" selected>Wilayah Persekutuan</option>
+                    <option value="jb">Johor Bahru</option>
+                  </select>
+              </div>     
+
+              <div class="form-group" *ngIf="siteValue == 'wilayah'">
+                <label for="org_name">Building:</label>
+                 <select id="job_type" name="job_type" class="form-control" [(ngModel)]="BuildValue">
+	                  <option value="0">Please select</option>
+                    <option value="1" selected>Block A</option>
+                    <option value="2">Block B</option>
+                    <option value="3">Block C</option>
+                    <option value="4">Block D</option>
+                    <option value="5">Block E</option>	
+                  </select>
+              </div>
+              <div class="form-group" *ngIf="BuildValue == '1'">
+                <label for="org_name">Area:</label>
+                 <select id="job_type" name="job_type" class="form-control" >
+	                  <option value="0">Please select</option>
+                    <option value="1" selected>Area A</option>
+                    <option value="2">Area B</option>
+                    <option value="3">Area C</option>
+                    <option value="4">Area D</option>
+                    <option value="5">Area E</option>	
+                  </select>
+              </div>
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/helpdesk/workrequest']">Submit</button>
+        </div>
+  </div>
+</div>
+

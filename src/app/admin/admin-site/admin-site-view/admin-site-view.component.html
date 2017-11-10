@@ -1,0 +1,101 @@
+<div class="row">    
+<div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <strong>Site Name</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal2.show()"></i>
+          <i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/site/edit']"></i>
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-8">
+              <img width="240px" src="https://c1.staticflickr.com/3/2479/3745773048_7c5b2c087f_b.jpg"/>
+            </div>
+          </div>
+          <br/>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Name</strong></label>
+            <div class="col-md-9">
+              Wilayah Persekutuan
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Location</strong></label>
+            <div class="col-md-9">
+              no.8, Jalan P/C 38, 43000 ,puchong, Selangor
+            </div>
+          </div>          
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Description</strong></label>
+            <div class="col-md-9" style="text-align: justify">
+              Jabatan Kerja Raya (JKR) Malaysia telah ditubuhkan sejak 1872 dan berfungsi sebagai sebuah agensi teknikal kepada Kerajaan Malaysia. JKR berperanan melaksanakan projek-projek pembangunan dan penyenggaraan infrastruktur kepada pelbagai kementerian, jabatan, badan berkanun dan kerajaan negeri seperti jalan, bangunan, lapangan terbang, pelabuhan dan jeti.
+            </div>
+          </div>
+
+      </div>
+      </div>
+    </div><!--/.col-->
+
+        <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i><strong> List Building </strong>
+        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/admin/building/new']"></i></div>
+        <div class="card-block">
+          <table class="table table-sm">
+            <thead>            
+                <th>Building</th>     
+            </thead>
+            <tbody>
+              <tr [routerLink]="['/admin/building/view']">
+                <td>Bulding A</td>
+              </tr>
+              <tr [routerLink]="['/admin/building/view']">
+                <td>Building B</td>
+              </tr>
+              <tr [routerLink]="['/admin/building/view']">
+                <td>Building C</td>
+              </tr>
+              <tr [routerLink]="['/admin/building/view']">
+                <td>Building D</td>
+              </tr>
+              <tr [routerLink]="['/admin/building/view']">
+                <td>Building E</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#/admin/user">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div bsModal #dangerModal2="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-danger" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Delete User</h4>
+        <button type="button" class="close" (click)="dangerModal2.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Sure want to delete?&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="dangerModal2.hide()">Close</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/admin/site/']" >Delete</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

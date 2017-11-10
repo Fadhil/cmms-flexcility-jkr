@@ -1,0 +1,38 @@
+<div class="col-sm-8">
+  <div class="card">
+    <div class="card-header">
+      <strong>Register New Organization</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="form-group row">
+            <div class="col-md-8">
+				<image-upload></image-upload>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label for="org_name">Name:</label>
+                <input type="text" class="form-control" id="org_name" placeholder="Organization Name">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Subdomain:</label>
+                <input type="text" class="form-control" id="org_subdomain" placeholder="Subdomain">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Description:</label>
+                <input type="text" class="form-control" id="org_description" placeholder="description">
+              </div>   
+              <div class="form-group">
+                <label for="org_name">Location:</label>
+                <input type="text" class="form-control" id="org_description" placeholder="description">
+              </div>             </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/admin/organization/']">Submit</button>
+        </div>
+  </div>
+</div>
+

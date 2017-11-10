@@ -1,0 +1,43 @@
+<div class="animated fadeIn">
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Building Information</strong>
+        </div>
+        <div class="card-block">
+          <div class="form-group">
+            <label for="building_name">Building Name</label>
+            <input type="text" class="form-control" id="building_name" placeholder="Enter building name">
+          </div>
+          <div class="form-group">
+            <label for="block">Block</label>
+            <input type="text" class="form-control" id="block" placeholder="Block A">
+          </div>
+          <div class="form-group">
+            <label for="location">Room/Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter Location">
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" for="request_details">Request Details</label>
+
+            <textarea id="request_details" name="request_details" rows="9" class="form-control" placeholder="Request Details .."></textarea>
+
+          </div>
+          <image-upload></image-upload>
+          <!--<div class="form-group row">-->
+          <!--<label class="col-md-3 form-control-label" for="file-input">Image Upload</label>-->
+          <!--<div class="col-md-9">-->
+          <!--<input type="file" id="file-input" name="file-input">-->
+          <!--</div>-->
+          <!--</div>-->
+        </div>
+
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/client/service-requisition-summary']"><i class="fa fa-dot-circle-o"></i> Submit</button>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div>
+</div>

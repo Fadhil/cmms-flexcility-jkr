@@ -1,0 +1,42 @@
+<div class="col-sm-8">
+  <div class="card">
+    <div class="card-header">
+      <strong>Add New Traits</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label for="org_name">Name:</label>
+                <input type="text" class="form-control" id="org_name" placeholder="Organization Name">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Description:</label>
+                <input type="text" class="form-control" id="trait_description" placeholder="Subdomain">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Person Incharge:</label>
+              <select id="job_type" name="job_type" class="form-control">
+                <option value="0">Please select</option>
+                <optgroup label="Staff">
+                  <option value="1">En. Rodham Abu Bakar</option>
+                  <option value="2">En. Fairul Murad</option>
+                  <option value="3">Pn. Maizatul Faris</option>
+                  <option value="4">Ck. Syazlina Bakar</option>
+                  <option value="5">Hj. Ismail Ahmad</option>
+                </optgroup>
+                <optgroup label="-----------">
+                  <option value="6">Contractor</option>
+                </optgroup>
+              </select>
+              </div>                
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/admin//site']">Submit</button>
+        </div>
+  </div>
+</div>
+

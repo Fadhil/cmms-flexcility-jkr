@@ -1,0 +1,64 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Edit User</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="form-group row">
+            <div class="col-md-8">
+                <label for="org_name">Photo:</label>
+				<image-upload></image-upload>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                	<label for="org_name">Email:</label>
+                <input type="text" class="form-control" id="email_id" value="admin@flexcility.com">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Username:</label>
+                <input type="text" class="form-control" id="user_username" value="Administrator">
+              </div>
+              <div class="form-group">
+                <label for="org_name">No.Phone :</label>
+                <input type="text" class="form-control" id="user_phone" value="0133422091">
+              </div>              
+              <div class="form-group">
+                <label for="org_name">Worker ID:</label>
+                <input type="text" class="form-control" id="user_work_id" value="FSE0122">
+              </div>
+                <div class="form-group">
+                <label for="org_name">Password:</label>
+                <input type="password" class="form-control" id="user_work_id" value="Asset Name">
+              </div> 
+            <div class="form-group">
+                	<label for="org_name">Department:</label>
+                	<select id="user_dept" name="user_dept" class="form-control">
+						<option value="0">Please select</option>
+                  		<option value="1" selected="selected">Human Resource</option>
+                  		<option value="2">Information Technology</option>
+                  		<option value="3">Accountant</option>	
+                  		<option value="3">Marketing</option>	
+              		</select>
+              </div>                
+              <div class="form-group">
+                <label for="org_name">User Type:</label>
+                  <select id="job_type" name="job_type" class="form-control">
+                      <option value="0">Please select</option>
+                      <option value="1" selected="selected">Admin</option>
+                      <option value="2">Engineer</option>
+                      <option value="3">Technician</option> 
+                      <option value="3">Vendor</option> 
+                  </select>
+              </div>                
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/admin/user/view']">Edit</button>
+        </div>
+  </div>
+</div>
+

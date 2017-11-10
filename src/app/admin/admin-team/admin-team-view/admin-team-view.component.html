@@ -1,0 +1,52 @@
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Team A </strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal.show()"></i><i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/team/edit']"></i>
+        </div>
+        <div class="card-block">
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Trait</strong></label>
+            <div class="col-md-9">
+              Electrical
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Leader</strong></label>
+            <div class="col-md-9">
+              Azmarul Asfan
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Team Member</strong></label>
+            <div class="col-md-9">
+              <ol>
+              <li>Zamil Idris</li>
+              <li>Zaidi Anwari</li>
+              <li>Anuar Adam</li>
+              <li>Syech Raie</li>            
+              </ol>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div><!--/.col-->
+
+<div bsModal #dangerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-danger" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Delete Team</h4>
+        <button type="button" class="close" (click)="dangerModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Sure want to delete?&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="dangerModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/admin/team/']" >Delete</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

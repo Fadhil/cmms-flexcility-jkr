@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i><strong> List of Work request </strong>
+        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/engineer/workrequest/new']"></i></div>
+        <div class="card-block">
+          <table class="table table-sm">
+            <thead>
+                <th>Request</th>
+                <th>Date</th>
+                <th>Verified by</th>
+            </thead>
+            <tbody>
+              <tr [routerLink]="['/engineer/workrequest/view']">
+                <td>Pintu Rosak</td>
+                <td>2012/01/01</td>
+                <td>Haruka</td>
+
+              </tr>
+              <tr [routerLink]="['/engineer/workrequest/view']">
+                <td>Tandas Tersumbat</td>
+                <td>2012/02/01</td>
+                <td>Jaacob</td>
+ 
+              </tr>
+              <tr [routerLink]="['/engineer/workrequest/view']">
+                <td>Lampu Rosak</td>
+                <td>2012/02/01</td>
+                <td>Zaharud</td>
+
+              </tr>
+              <tr [routerLink]="['/engineer/workrequest/view']">
+                <td>LCD Projector Offline</td>
+                <td>2012/03/01</td>
+                <td>Kamarudd</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#/admin/user">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6">
+    <router-outlet></router-outlet>
+    <router-outlet name="popup"></router-outlet>
+    </div>
+</div>

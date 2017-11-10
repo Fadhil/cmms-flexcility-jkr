@@ -1,0 +1,72 @@
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Work Order Number - MT-M-0182</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal.show()"></i><i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/asset/edit']"></i>
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-8">
+              <img width="240px" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/175/cache/room-air-conditioner_17521_600x450.jpg"/>
+            </div>
+          </div>
+          <br/>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Site</strong></label>
+            <div class="col-md-9">
+              Wilayah Persekutuan
+
+            </div>
+          </div>          
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Area</strong></label>
+            <div class="col-md-9">
+              Block A
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Asset ID</strong></label>
+            <div class="col-md-9">
+              AC-101
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong> Name</strong></label>
+            <div class="col-md-9">
+              Daikin EcoKing
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong> Trait</strong></label>
+            <div class="col-md-9">
+              Electrical
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong> Description</strong></label>
+            <div class="col-md-9">
+              Aircond ini harus diselenggara sekurang kurangnya sebulan sekali
+            </div>
+          </div>        </div>
+      </div>
+    </div><!--/.col-->
+
+    <div bsModal #dangerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-danger" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Delete User</h4>
+        <button type="button" class="close" (click)="dangerModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Sure want to delete?&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="dangerModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/admin/asset/']" >Delete</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

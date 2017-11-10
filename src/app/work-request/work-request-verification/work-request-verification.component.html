@@ -1,0 +1,172 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Requester Information
+        </div>
+        <div class="card-block">
+          <table>
+            <tr>
+              <th>Staff ID:</th><td>87223</td>
+            </tr>
+            <tr>
+              <th>Department:</th><td>Human Resource</td>
+            </tr>
+            <tr>
+              <th>Name:</th><td>Pn Roslina Jamil</td>
+            </tr>
+            <tr>
+              <th>Phone Number:</th><td>0108878288 </td>
+            </tr>
+            <tr>
+              <th>Email:</th><td>r.jamil@gmail.com </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><!--/.col-->
+
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Work Request Information
+        </div>
+        <div class="card-block">
+          <tr>
+            <th>Building:</th><td>Mahkamah Persekutuan Kuala Lumpur</td>
+          </tr>
+          <tr>
+            <th>Block:</th><td>G-2</td>
+          </tr>
+          <hr/>
+          <tr>
+            <th>Request Details:</th><td>Aircond tidak berfungsi. Angin ada, tapi tidak sejuk</td>
+          </tr>
+
+        </div>
+      </div>
+    </div><!--/.col-->
+
+  </div><!--/.row-->
+  <div class="row">
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Work Request - MT-M-0182</strong>
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-6">
+              <img width="240px" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/175/cache/room-air-conditioner_17521_600x450.jpg"/>
+            </div>
+          </div>
+          <br/>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Job Trait</strong></label>
+            <div class="col-md-9">
+               Electrical
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Job Type</strong></label>
+            <div class="col-md-9">
+              Corrective Maintenance
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type">High Priority</label>
+            <div class="col-md-9">
+              Yes
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type">Assigned To</label>
+            <div class="col-md-9">
+              En. Rodham Abu Bakar
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Verification</strong>
+        </div>
+
+        <div class="card-block">
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label" for="request_time"><strong>Requested On:</strong></label>
+            <div class="col-md-8">
+              11/05/2017 - 9.48am
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label">Verified via</label>
+            <div class="col-md-8">
+              <div class="checkbox">
+                <label for="checkbox1">
+                  <input type="checkbox" id="checkbox1" name="checkbox1" value="option1"> Visual Inspection
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkbox2">
+                  <input type="checkbox" id="checkbox2" name="checkbox2" value="option2"> Phone
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkbox3">
+                  <input type="checkbox" id="checkbox3" name="checkbox3" value="option3"> Others
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="reason">Comments:</label>
+                <textarea id="request_details" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>
+
+              </div>
+            </div>
+          </div><!--/.row-->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="reason">Reason:</label>
+                <input type="text" class="form-control" id="reason" placeholder="Reason for closing">
+              </div>
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-sm btn-default" type="button" data-toggle="modal" (click)="cancelWorkRequestModal.show()">Close Work Request</button>
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders']"><i class="fa fa-dot-circle-o"></i>Create Work Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div bsModal #cancelWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="cancelWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" (click)="cancelWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

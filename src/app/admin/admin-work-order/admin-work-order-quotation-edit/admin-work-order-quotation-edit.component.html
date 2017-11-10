@@ -1,0 +1,98 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Edit Work Order</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="form-group row">
+            <div class="col-md-10">
+                <label for="org_name">Photo:</label>
+				<image-upload src="https://d284x0ytlho6sy.cloudfront.net/images/CPC/55/Customliquidthumb.jpg"></image-upload>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="form-group">
+                <label for="org_name">work Order ID:</label>
+                <input type="text" class="form-control" id="asset_id" Value="WR-101">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Site:</label>
+                  <select id="site_name" name="site_name" class="form-control"[(ngModel)]="siteValue" >
+                    <option value="0">Please select</option>
+                    <option value="wilayah" selected>Wilayah Persekutuan</option>
+                    <option value="jb">Johor Bahru</option>
+                  </select>
+              </div>     
+
+              <div class="form-group" *ngIf="siteValue == 'wilayah'">
+                <label for="org_name">Building:</label>
+                 <select id="job_type" name="job_type" class="form-control" [(ngModel)]="BuildVal" >
+	                  <option value="0">Please select</option>
+                    <option value="1" selected>Block A</option>
+                    <option value="2">Block B</option>
+                    <option value="3">Block C</option>
+                    <option value="4">Block D</option>
+                    <option value="5">Block E</option>	
+                  </select>
+              </div>
+              <div class="form-group" *ngIf="BuildVal == '1'">
+                <label for="org_name">Area:</label>
+                 <select id="job_type" name="job_type" class="form-control" >
+	                  <option value="0">Please select</option>
+                    <option value="1" selected>Area A</option>
+                    <option value="2">Area B</option>
+                    <option value="3">Area C</option>
+                    <option value="4">Area D</option>
+                    <option value="5">Area E</option>	
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="org_name">High Priority:</label>
+               <input type="checkbox" id="priority" checked>
+              </div>
+            <div class="form-group">
+            <label class="assign" for="job_type">Assign To:</label>
+              <select id="job_type" name="job_type" class="form-control">
+                <option value="0">Please select</option>
+                <optgroup label="Staff">
+                  <option value="1">En. Rodham Abu Bakar</option>
+                  <option value="2">En. Fairul Murad</option>
+                  <option value="3">Pn. Maizatul Faris</option>
+                  <option value="4">Ck. Syazlina Bakar</option>
+                  <option value="5">Hj. Ismail Ahmad</option>
+                </optgroup>
+                <optgroup label="-----------">
+                  <option value="6">Contractor</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="org_name">Job Trait:</label>
+                    <select id="job_type" name="job_type" class="form-control" placeholder="Electrical">
+						<option value="0">Please select</option>
+                  		<option value="1">Electrical</option>
+                  		<option value="2" selected="selected">Mechanical</option>
+                  		<option value="3">Civil</option>
+                  		<option value="4">HouseKeeping</option>
+                  		<option value="5">Gardening and Lanscaping</option>
+                  		<option value="5">Pest Control</option>	
+                  		<option value="5">Security</option>	
+              		</select>
+              </div>
+
+                <div class="form-group">
+                <label for="org_name">Job Type:</label>
+                <input type="text" class="form-control" id="asset_id" placeholder="Asset ID">
+              </div>
+                
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/admin/workorder/quotation/view']">Edit</button>
+        </div>
+  </div>
+</div>
+

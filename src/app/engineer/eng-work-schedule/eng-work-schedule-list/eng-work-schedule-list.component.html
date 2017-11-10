@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-calendar"></i><strong> Work Schedule </strong>
+          <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/engineer/schedule/new']"></i>
+        </div>
+        <div class="card-block">
+          <angular2-fullcalendar [options]="calendarOptions"></angular2-fullcalendar>
+        </div>
+    </div>
+  </div>
+</div>

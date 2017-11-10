@@ -1,0 +1,107 @@
+<div class="row">    
+<div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Verification</strong>
+        </div>
+
+        <div class="card-block">
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label" for="request_time"><strong>Requested On:</strong></label>
+            <div class="col-md-8">
+              11/05/2017 - 9.48am
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-4 form-control-label">Verified via</label>
+            <div class="col-md-8">
+              <div class="checkbox">
+                <label for="checkbox1">
+                  <input type="checkbox" id="checkbox1" name="checkbox1" value="option1"> Visual Inspection
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkbox2">
+                  <input type="checkbox" id="checkbox2" name="checkbox2" value="option1"> Phone
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkbox3">
+                  <input type="checkbox" id="checkbox3" name="checkbox3" value="option1"> Others
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label for="reason">Comments:</label>
+                <textarea id="request_details" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+          <div class="form-group">
+            <label for="org_name">Action:</label>
+              <select id="site_name" name="site_name" class="form-control" [(ngModel)]="action" >
+                <option value="0">Please select</option>
+                <option value="close">Close Work request</option>
+                <option value="open">Open Work Order</option>
+              </select>
+          </div>
+          </div>
+          </div>     
+          <!--/.row-->
+          <div class="row" *ngIf="action == 'close'">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label for="reason">Reason:</label>
+                <input type="text" class="form-control" id="reason" placeholder="Reason for closing">
+              </div>
+            </div>
+          </div><!--/.row-->
+
+        <div class="row" *ngIf="action == 'open'">  
+          <div class="col-sm-8">       
+          <div class="form-group">
+            <label class="assign" for="job_type">Assign To:</label>
+              <select id="job_type" name="job_type" class="form-control"[(ngModel)]="AssignVal">
+                <option value="0">Please select</option>
+                <optgroup label="Staff">
+                  <option value="1">En. Rodham Abu Bakar</option>
+                  <option value="2">En. Fairul Murad</option>
+                  <option value="3">Pn. Maizatul Faris</option>
+                  <option value="4">Ck. Syazlina Bakar</option>
+                  <option value="5">Hj. Ismail Ahmad</option>
+                </optgroup>
+                <optgroup label="-----------">
+                  <option value="6">Contractor</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row" >  
+          <div class="col-sm-8">  
+         <div class="form-group" *ngIf="AssignVal == '6'">
+            <label class="assign" for="job_type">Vendor:</label>
+              <select id="job_type" name="job_type" class="form-control">
+                <option value="0">Please select</option>
+                  <option value="1">SetiaBangsa Sdn Bhd</option>
+                  <option value="2">Bahgia Sdn Bhd</option>
+                  <option value="3">Madsipura Sdn Bhd</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/engineer/workrequest']"><i class="fa fa-dot-circle-o"></i>Submit</button>
+        </div>
+      </div>
+    </div>
+    
+</div>

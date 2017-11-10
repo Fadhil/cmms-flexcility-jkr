@@ -1,0 +1,74 @@
+<div class="row">    
+  <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Verification</strong>
+          </div>
+  
+          <div class="card-block">
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label" for="request_time"><strong>Requested On:</strong></label>
+              <div class="col-md-10">
+                11/05/2017 - 9.48am
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label">Verified via</label>
+              <div class="col-md-10">
+                <div class="checkbox">
+                  <label for="checkbox1">
+                    <input type="checkbox" id="checkbox1" name="checkbox1" value="option1"> Visual Inspection
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label for="checkbox2">
+                    <input type="checkbox" id="checkbox2" name="checkbox2" value="option1"> Phone
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label for="checkbox3">
+                    <input type="checkbox" id="checkbox3" name="checkbox3" value="option1"> Others
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="form-group">
+                  <label for="reason">Comments:</label>
+                  <textarea id="request_details" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>
+  
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10">
+            <div class="form-group">
+              <label for="org_name">Action:</label>
+                <select id="site_name" name="site_name" class="form-control" [(ngModel)]="action" >
+                  <option value="0">Please select</option>
+                  <option value="close">Cancel Work request</option>
+                  <option value="open">verify Work request</option>
+                </select>
+            </div>
+            </div>
+            </div>     
+            <!--/.row-->
+            <div class="row" *ngIf="action == 'close'">
+              <div class="col-sm-10">
+                <div class="form-group">
+                  <label for="reason">Reason:</label>
+                  <input type="text" class="form-control" id="reason" placeholder="Reason for closing">
+                </div>
+              </div>
+            </div><!--/.row-->
+  
+  
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/helpdesk/openworkrequest/']"><i class="fa fa-dot-circle-o"></i>Submit</button>
+          </div>
+        </div>
+      </div>
+      
+  </div>

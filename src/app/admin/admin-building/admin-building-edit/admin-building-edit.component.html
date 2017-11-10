@@ -1,0 +1,30 @@
+<div class="col-sm-8">
+  <div class="card">
+    <div class="card-header">
+      <strong>Edit Site</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                	<label for="org_name">Name:</label>
+                <input type="text" class="form-control" id="org_name" placeholder="" value="Wilayah Persekutuan">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Location:</label>
+                <input type="text" class="form-control" id="org_loc" placeholder="" value="no.8, Jalan P/C 38, 43000 ,puchong, Selangor">
+              </div>                 
+              <div class="form-group">
+                <label for="org_name">Description:</label>
+                <textarea id="org_description" name="org-description" rows="4" class="form-control" placeholder="">Jabatan Kerja Raya (JKR) Malaysia telah ditubuhkan sejak 1872 dan berfungsi sebagai sebuah agensi teknikal kepada Kerajaan Malaysia. JKR berperanan melaksanakan projek-projek pembangunan dan penyenggaraan infrastruktur kepada pelbagai kementerian, jabatan, badan berkanun dan kerajaan negeri seperti jalan, bangunan, lapangan terbang, pelabuhan dan jeti.</textarea>
+              </div>             
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/admin/building/view']">Edit</button>
+        </div>
+  </div>
+</div>
+

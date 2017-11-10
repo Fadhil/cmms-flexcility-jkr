@@ -1,0 +1,79 @@
+<div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>View User </strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal.show()"></i><i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/user/edit']"></i>
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-8">
+              <img width="240px" src="http://icons.iconarchive.com/icons/hopstarter/scrap/256/Administrator-icon.png"/>
+            </div>
+          </div>
+          <br/>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong> worker ID</strong></label>
+            <div class="col-md-9">
+              
+            </div>
+          </div>          
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Email</strong></label>
+            <div class="col-md-9">
+              
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong> Password</strong></label>
+            <div class="col-md-9">
+              
+            </div>
+          </div>          
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Department</strong></label>
+            <div class="col-md-9">
+              
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>No.phone</strong></label>
+            <div class="col-md-9">
+              
+            </div>
+          </div>          
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Username</strong></label>
+            <div class="col-md-9">
+              
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong> User Type</strong></label>
+            <div class="col-md-9">
+              
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div><!--/.col-->
+</div>
+
+<div bsModal #dangerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-danger" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Delete User</h4>
+        <button type="button" class="close" (click)="dangerModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Sure want to delete?&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="dangerModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/admin/user/']" >Delete</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

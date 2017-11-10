@@ -1,0 +1,68 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Edit Asset</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="form-group row">
+            <div class="col-md-8">
+                <label for="org_name">Photo:</label>
+				<image-upload></image-upload>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                  <label for="org_name">Site:</label>
+                  <select id="site_name" name="site_name" class="form-control" >
+            <option value="0">Please select</option>
+                      <option value="1" selected="selected">Wilayah Persekutuan</option>
+                      <option value="2">Johor Bahru</option>
+                  </select>
+              </div>
+                <div class="form-group">
+                	<label for="org_name">Area:</label>
+                	<select id="job_type" name="job_type" class="form-control" >
+						<option value="0">Please select</option>
+                  		<option value="1" selected="selected">Block A</option>
+                  		<option value="2">Block B</option>
+                  		<option value="3">Block C</option>
+                  		<option value="4">Block D</option>
+                  		<option value="5">Block E</option>	
+              		</select>
+              </div>
+              <div class="form-group">
+                <label for="org_name">Asset ID:</label>
+                <input type="text" class="form-control" id="asset_id" placeholder="Asset ID" value="123456789">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Name:</label>
+                <input type="text" class="form-control" id="asset_name" placeholder="Asset Name" value="Daikin">
+              </div>
+                <div class="form-group">
+                <label for="org_name">Trait:</label>
+                    <select id="job_type" name="job_type" class="form-control" placeholder="Electrical">
+						<option value="0">Please select</option>
+                  		<option value="1">Electrical</option>
+                  		<option value="2" selected="selected">Mechanical</option>
+                  		<option value="3">Civil</option>
+                  		<option value="4">HouseKeeping</option>
+                  		<option value="5">Gardening and Lanscaping</option>
+                  		<option value="5">Pest Control</option>	
+                  		<option value="5">Security</option>	
+              		</select>
+              </div>  
+              <div class="form-group">
+                <label for="org_name">Description:</label>
+                <textarea class="form-control" id="asset_description" rows="4" placeholder="description">Air conditioning (often referred to as AC, A.C., or A/C) is the process of removing or adding heat from/to a space, thus cooling or heating the space's average temperature.</textarea>
+              </div>                
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/admin/asset/view']">Edit</button>
+        </div>
+  </div>
+</div>
+

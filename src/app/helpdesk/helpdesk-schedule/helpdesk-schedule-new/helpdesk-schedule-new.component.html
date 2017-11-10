@@ -1,0 +1,115 @@
+
+<div class="col-sm-10">
+  <div class="card">
+    <div class="card-header">
+      <strong>Create Work Schedule</strong>
+    </div>
+    <br>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="form-group">
+                <label for="org_name">Title:</label>
+                <input type="text" class="form-control" id="asset_id" placeholder="Event Title">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Start Date:</label>
+                <input type="date" class="form-control" id="start_date">
+                <input type="time" class="form-control" id="start_time">
+              </div>
+              <div class="form-group">
+                <label for="org_name">End Date:</label>
+                <input type="date" class="form-control" id="end_date">
+                <input type="time" class="form-control" id="end_time">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Color:</label>
+                  <input type="color" name="favcolor" value="#ffffff">
+              </div>
+              <div class="form-group">
+                <label for="org_name">Site:</label>
+                  <select id="site_name" name="site_name" class="form-control"[(ngModel)]="siteVal" >
+                    <option value="0">Please select</option>
+                    <option value="wila">Wilayah Persekutuan</option>
+                    <option value="jb">Johor Bahru</option>
+                  </select>
+              </div>     
+
+              <div class="form-group" *ngIf="siteVal == 'wila'">
+                <label for="org_name">Building:</label>
+                 <select id="job_type" name="job_type" class="form-control" [(ngModel)]="buildVal">
+                    <option value="0">Please select</option>
+                    <option value="1">Building A</option>
+                    <option value="2">Building B</option>
+                    <option value="3">Building C</option>
+                    <option value="4">Building D</option>
+                    <option value="5">Building E</option>	
+                  </select>
+              </div>
+
+              <div class="form-group" *ngIf="buildVal == '1'">
+                <label for="org_name">Area:</label>
+                 <select id="job_type" name="job_type" class="form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Area A</option>
+                    <option value="2">Area B</option>
+                    <option value="3">Area C</option>
+                    <option value="4">Area D</option>
+                    <option value="5">Area E</option>	
+                  </select>
+              </div>
+
+          <div class="form-group">
+            <label class="assign" for="job_type">Assign To:</label>
+              <select id="job_type" name="job_type" class="form-control" [(ngModel)]="AssignVal">
+                <option value="0">Please select</option>
+                <optgroup label="Staff">
+                  <option value="1">En. Rodham Abu Bakar</option>
+                  <option value="2">En. Fairul Murad</option>
+                  <option value="3">Pn. Maizatul Faris</option>
+                  <option value="4">Ck. Syazlina Bakar</option>
+                  <option value="5">Hj. Ismail Ahmad</option>
+                </optgroup>
+                <optgroup label="-----------">
+                  <option value="6">Contractor</option>
+                </optgroup>
+              </select>
+            </div>
+          <div class="form-group" *ngIf="AssignVal == '6'">
+            <label class="assign" for="job_type">Vendor:</label>
+              <select id="job_type" name="job_type" class="form-control">
+                <option value="0">Please select</option>
+                  <option value="1">SetiaBangsa Sdn Bhd</option>
+                  <option value="2">Bahgia Sdn Bhd</option>
+                  <option value="3">Madsipura Sdn Bhd</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+                <label for="org_name">Job Trait:</label>
+                    <select id="job_type" name="job_type" class="form-control" placeholder="Electrical">
+            <option value="0">Please select</option>
+                      <option value="1">Electrical</option>
+                      <option value="2" selected="selected">Mechanical</option>
+                      <option value="3">Civil</option>
+                      <option value="4">HouseKeeping</option>
+                      <option value="5">Gardening and Lanscaping</option>
+                      <option value="5">Pest Control</option>	
+                      <option value="5">Security</option>	
+                  </select>
+              </div>
+
+                <div class="form-group">
+                <label for="org_name">Job Type:</label>
+                <input type="text" class="form-control" id="asset_id" placeholder="Job Type">
+              </div>
+      
+            </div>
+          </div><!--/.row-->
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/helpdesk/schedule/calendar']">Submit</button>
+        </div>
+  </div>
+</div>
+

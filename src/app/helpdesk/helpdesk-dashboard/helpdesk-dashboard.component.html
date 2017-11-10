@@ -1,0 +1,138 @@
+<div class="animated fadeIn">
+  <br>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-2">
+      <h4>Work Requests</h4>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-sm-4 offset-md-2"[routerLink]="['/helpdesk/workrequest']">
+      <div class="card">
+        <div class="card-block card-primary text-center">
+          <div class="text-uppercase font-weight-bold">New</div>
+          <div class="h2 py-3">10</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-md-2 col-sm-4">
+      <div class="card">
+        <div class="card-block card-warning text-center" [routerLink]="['/helpdesk/workrequest']">
+          <div class="text-uppercase font-weight-bold">Open</div>
+          <div class="h2 py-3">2</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-md-2 col-sm-4">
+      <div class="card">
+        <div class="card-block card-success text-center" [routerLink]="['/helpdesk/workrequest']">
+          <div class="text-uppercase font-weight-bold">Verified</div>
+          <div class="h2 py-3">5</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-md-2 col-sm-4">
+      <div class="card">
+        <div class="card-block card-danger text-center" [routerLink]="['/helpdesk/workrequest']">
+          <div class=" text-uppercase font-weight-bold">Cancelled</div>
+          <div class="h2 py-3">0</div>
+          <!--button type="button" class="btn btn-secondary" data-toggle="modal" (click)="myModal.show()">
+            Launch demo modal
+          </button-->
+        </div>
+      </div>
+    </div><!--/.col-->
+     <div class="card-block">
+     </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6 offset-md-2">
+      <h4>Work Orders</h4>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-sm-4 offset-md-2" >
+      <div class="card">
+        <div class="card-block card-primary text-center" [routerLink]="['/helpdesk/workorder']">
+          <div class="text-uppercase font-weight-bold">New</div>
+          <div class="h2 py-3">5</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-md-2 col-sm-4">
+      <div class="card">
+        <div class="card-block card-warning text-center" [routerLink]="['/helpdesk/workorder']">
+          <div class="text-uppercase font-weight-bold">Ongoing</div>
+          <div class="h2 py-3">2</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-md-2 col-sm-4">
+      <div class="card">
+        <div class="card-block card-success text-center" [routerLink]="['/helpdesk/workorder']">
+          <div class="text-uppercase font-weight-bold">Closed</div>
+          <div class="h2 py-3">3</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-md-2 col-sm-4">
+      <div class="card">
+        <div class="card-block text-center card-quotation" [routerLink]="['/helpdesk/workorder']">
+          <div class=" text-uppercase font-weight-bold">Quotations</div>
+          <div class="h2 py-3">2</div>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div>
+
+  <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-exclamation-circle" style="font-size:20px;"></i><strong> HIGHLIGHT </strong>
+        </div>
+        <div class="card-block">
+          <table class="table table-sm">
+            <thead>
+                <th>Date</th>
+                <th>Title</th>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>29/7/2017</td>
+                  <td>Event: VIP Visit – Majlis Perasmian</td>
+              </tr>
+              <tr>
+                  <td>20/8/2017</td>
+                  <td>Fallen Tree Branch Parking Lot E6</td>
+              </tr>
+              <tr>
+                  <td>1/9/2017</td>
+                  <td>Pipe Burst Block G Women’s Toilet L3</td>
+              </tr>
+              <tr>
+                  <td>12/9/2017</td>
+                  <td>Power Blackout Block B1</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#/admin/user">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+

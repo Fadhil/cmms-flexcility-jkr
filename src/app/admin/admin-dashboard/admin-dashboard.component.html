@@ -1,0 +1,220 @@
+<div class="row">
+<div class="col-sm-3">    
+<div class="card">
+      <div class="card-header">
+        Planned Preventive Maintenance
+      </div>
+      <div class="card-block">
+        <div class="chart-wrapper">
+          <canvas baseChart class="chart"
+          [data]="ppmdoughnutChartData"
+          [labels]="ppmdoughnutChartLabels"
+          [chartType]="ppmdoughnutChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+      <div class="text-center">
+          <h6>Total: 733</h6>
+      </div>
+    </div>
+ </div>
+ <div class="col-sm-3">       
+    <div class="card">
+      <div class="card-header">
+        Service Contract Maintenance
+      </div>
+      <div class="card-block">
+        <div class="chart-wrapper">
+          <canvas baseChart class="chart"
+          [data]="scmdoughnutChartData"
+          [labels]="scmdoughnutChartLabels"
+          [chartType]="scmdoughnutChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+      <div class="text-center">
+          <h6>Total: 133</h6>
+      </div>
+    </div>
+ </div>
+   <div class="col-sm-3">       
+    <div class="card">
+      <div class="card-header">
+        Corrective Maintenance
+      </div>
+      <div class="card-block">
+        <div class="chart-wrapper">
+          <canvas baseChart class="chart"
+          [data]="cmDoughnutChartData"
+          [labels]="cmDoughnutChartLabels"
+          [chartType]="cmDoughnutChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+      <div class="text-center">
+          <h6>Total: 500</h6>
+      </div>
+    </div>
+ </div>
+     <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          Events<br/>
+          <!--<div class="card-actions">-->
+          <!--<a href="http://www.chartjs.org">-->
+          <!--<small class="text-muted">docs</small>-->
+          <!--</a>-->
+          <!--</div>-->
+        </div>
+        <div class="card-block  event-card text-center">
+          <span><h1 class="event-display">12</h1>Events</span>
+        </div><br/>
+      </div>
+    </div>
+
+    <div class="card">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-sm-5">
+          <h5 class="card-title mb-0">PPM Work Order Status</h5>
+          <div class="small text-muted">April 3rd - April 12th 2017</div>
+        </div><!--/.col-->
+        <div class="col-sm-7 hidden-sm-down">
+          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+          <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option1"(click)="updatePpmDataDay()"> Day
+              </label>
+              <label class="btn btn-outline-secondary ">
+                <input type="radio" name="options" id="option2" (click)="updatePpmDataMonth()"> Month
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option3"(click)="updatePpmDataYear()"> Year
+              </label>
+            </div>
+          </div>
+        </div><!--/.col-->
+      </div><!--/.row-->
+      <div class="chart-wrapper">
+        <canvas baseChart class="chart"
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="card-footer">
+      <ul>
+        <li>
+          <div class="text-muted">Total PPM WO</div>
+          <strong>{{barChartTotals[0]}}({{barChartPercentage}}% Completed)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 93%" aria-valuenow="688" aria-valuemin="0" aria-valuemax="733"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+      <div class="card">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-sm-5">
+          <h5 class="card-title mb-0">SCM Work Order Status</h5>
+          <div class="small text-muted">April 3rd - April 12th 2017</div>
+        </div><!--/.col-->
+        <div class="col-sm-7 hidden-sm-down">
+          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+          <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option1" (click)="updateScmDataDay()"> Day
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option2" (click)="updateScmDataMonth()"> Month
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option3" (click)="updateScmDataYear()" > Year
+              </label>
+            </div>
+          </div>
+        </div><!--/.col-->
+      </div><!--/.row-->
+      <div class="chart-wrapper">
+        <canvas baseChart class="chart"
+                [datasets]="scmBarChartData"
+                [labels]="scmBarChartLabels"
+                [options]="scmBarChartOptions"
+                [legend]="scmBarChartLegend"
+                [chartType]="scmBarChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="card-footer">
+      <ul>
+        <li>
+          <div class="text-muted">Total SCM WO</div>
+          <strong>{{scmBarChartTotals[0]}}({{scmBarChartPercentage}}% Completed)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-sm-5">
+          <h5 class="card-title mb-0">CM Work Order Status</h5>
+          <div class="small text-muted">April 3rd - April 12th 2017</div>
+        </div><!--/.col-->
+        <div class="col-sm-7 hidden-sm-down">
+          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+          <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option1" (click)="updateCmDataDay()"> Day
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option2" (click)="updateCmDataMonth()"> Month
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option3" (click)="updateCmDataYear()"> Year
+              </label>
+            </div>
+          </div>
+        </div><!--/.col-->
+      </div><!--/.row-->
+      <div class="chart-wrapper">
+        <canvas baseChart class="chart"
+                [datasets]="cmBarChartData"
+                [labels]="cmBarChartLabels"
+                [options]="cmBarChartOptions"
+                [legend]="cmBarChartLegend"
+                [chartType]="cmBarChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="card-footer">
+      <ul>
+        <li>
+          <div class="text-muted">Total CM WO</div>
+          <strong>{{cmBarChartTotals[0]}}({{cmBarChartPercentage}}% Completed)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-striped bg-success" role="progressbar" style="width: 72%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,138 @@
+<div *ngIf="showAssign" >
+  <!--<div class="animated fadeIn">-->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        Work Request Information
+      </div>
+      <div class="card-block">
+        <table>
+          <tr>
+            <th>Staff ID:</th><td>87223</td>
+          </tr>
+          <tr>
+            <th>Department:</th><td>Human Resource</td>
+          </tr>
+          <tr>
+            <th>Name:</th><td>Pn Roslina Jamil</td>
+          </tr>
+          <tr>
+            <th>Phone Number:</th><td>0108878288 </td>
+          </tr>
+          <tr>
+            <th>Email:</th><td>r.jamil@gmail.com </td>
+          </tr>
+          <tr>
+            <th>Building:</th><td>Menara Towers</td>
+          </tr>
+          <tr>
+            <th>Block:</th><td>G-2</td>
+          </tr>
+          <hr/>
+          <tr>
+            <th>Request Details:</th><td>Aircond tidak berfungsi. Angin ada, tapi tidak sejuk</td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+  </div><!--/.col-->
+
+
+
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Work Request Number - MT-M-0182</strong>
+      </div>
+      <div class="card-block">
+
+        <div class="form-group row">
+          <label class="col-md-3 form-control-label" for="job_trait">Job Trait</label>
+          <div class="col-md-9">
+            <select id="job_trait" name="job_trait" class="form-control">
+              <option value="0">Please select</option>
+              <option value="1">Mechanical</option>
+              <option value="2">Electrical</option>
+              <option value="3">Civil</option>
+              <option value="4">Housekeeping</option>
+              <option value="5">Gardening and Landscaping</option>
+
+              <option value="6">Pest Control</option>
+
+              <option value="7">Security</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 form-control-label" for="job_type">Job Type</label>
+          <div class="col-md-9">
+            <select id="job_type" name="job_type" class="form-control">
+              <option value="0">Please select</option>
+              <option value="1">Planned Preventive Maintenance </option>
+              <option value="2">Service Contract Maintenance</option>
+              <option value="3">Corrective Maintenance</option>
+              <option value="4">Routine Inspection</option>
+              <option value="5">Event</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 form-control-label" for="job_type">High Priority</label>
+          <div class="col-md-9">
+            <label class="">
+              <input type="checkbox">
+            </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 form-control-label" for="job_type">Assign To</label>
+          <div class="col-md-9">
+            <select id="job_type" name="job_type" class="form-control">
+              <option value="0">Please select</option>
+              <option value="1">En. Rodham Abu Bakar</option>
+              <option value="2">En. Fairul Murad</option>
+              <option value="3">Pn. Maizatul Faris</option>
+              <option value="4">Ck. Syazlina Bakar</option>
+              <option value="5">Hj. Ismail Ahmad</option>
+            </select>
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="col-sm-6">
+            <img width="240px" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/175/cache/room-air-conditioner_17521_600x450.jpg"/>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-footer">
+
+        <button class="btn btn-sm btn-default" type="button" data-toggle="modal" (click)="cancelWorkRequestModal.show()">Close Work Request</button>
+        <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-requests/verification']"><i class="fa fa-dot-circle-o"></i> Submit</button>
+      </div>
+    </div>
+
+  </div><!--/.col-->
+  <!--</div>-->
+</div>
+
+<div bsModal #cancelWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="cancelWorkRequestModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" (click)="cancelWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

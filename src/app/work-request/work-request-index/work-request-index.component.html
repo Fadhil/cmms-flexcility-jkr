@@ -1,0 +1,605 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> New Work Requests
+        </div>
+        <div class="card-block">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Work Request ID</th>
+              <th>Date registered</th>
+              <th>Description</th>
+              <th>Trait</th>
+              <th>Type</th>
+              <th>Priority</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-toggle="modal" (click)="assignWorkRequestModal.show()">
+              <td>SM-0170</td>
+              <td>28/05/2017</td>
+              <td>Aircond not functioning. Air blowing, but not cold.</td>
+              <td>Electrical</td>
+              <td>Corrective Maintenance</td>
+              <td><span class="badge badge-primary">Normal</span></td>
+
+            </tr>
+            <tr>
+              <td>SM-1075</td>
+              <td>09/05/2017</td>
+              <td>Escalator speed not correct.</td>
+              <td>Mechanical</td>
+              <td>Corrective Maintenance</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+
+            </tbody>
+          </table>
+          <!--<ul class="pagination">-->
+          <!--<li class="page-item"><a class="page-link" href="#">Prev</a></li>-->
+          <!--<li class="page-item active">-->
+          <!--<a class="page-link" href="#">1</a>-->
+          <!--</li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">4</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+          <!--</ul>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Verified Work Requests
+        </div>
+        <div class="card-block">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Work Request ID</th>
+              <th>Date registered</th>
+              <th>Description</th>
+              <th>Trait</th>
+              <th>Type</th>
+              <th>Priority</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--<tr data-toggle="modal" (click)="closeWorkOrderModal.show()">-->
+            <tr data-toggle="modal" (click)="assignWorkOrderModal.show()">
+              <td>SM-1056</td>
+              <td>18/05/2017</td>
+              <td>No lighting in 2nd Floor Stairwell</td>
+              <td>Electrical</td>
+              <td>Corective Maintenance</td>
+              <td><span class="badge badge-danger">Normal</span></td>
+
+            </tr>
+            </tbody>
+          </table>
+          <!--<ul class="pagination">-->
+          <!--<li class="page-item"><a class="page-link" href="#">Prev</a></li>-->
+          <!--<li class="page-item active">-->
+          <!--<a class="page-link" href="#">1</a>-->
+          <!--</li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">4</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+          <!--</ul>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Work Orders
+        </div>
+        <div class="card-block">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Work Order ID</th>
+              <th>Date registered</th>
+              <th>Description</th>
+              <th>Trait</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--<tr data-toggle="modal" (click)="closeWorkOrderModal.show()">-->
+            <tr [routerLink]="['/work-orders/report']">
+              <td>SM-1080</td>
+              <td>26/05/2017</td>
+              <td>Repair pipe burst at ground floor lobby toilet</td>
+              <td>Mechanical</td>
+              <td>Corective Maintenance</td>
+              <td><span class="badge badge-success">Closed</span></td>
+
+            </tr>
+            </tbody>
+          </table>
+          <!--<ul class="pagination">-->
+          <!--<li class="page-item"><a class="page-link" href="#">Prev</a></li>-->
+          <!--<li class="page-item active">-->
+          <!--<a class="page-link" href="#">1</a>-->
+          <!--</li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">4</a></li>-->
+          <!--<li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+          <!--</ul>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div bsModal #verifyWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="verifyWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Assign Work Request</h4>
+        <button type="button" class="close" (click)="verifyWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-header">
+            <strong>Verification</strong>
+          </div>
+
+          <div class="card-block">
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label" for="request_time"><strong>Requested On:</strong></label>
+              <div class="col-md-8">
+                11/05/2017 - 9.48am
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label">Verified via</label>
+              <div class="col-md-8">
+                <div class="checkbox">
+                  <label for="checkbox1">
+                    <input type="checkbox" id="checkbox1" name="checkbox1" value="option1"> Visual Inspection
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label for="checkbox2">
+                    <input type="checkbox" id="checkbox2" name="checkbox2" value="option2"> Phone
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label for="checkbox3">
+                    <input type="checkbox" id="checkbox3" name="checkbox3" value="option3"> Others
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="reason">Comments:</label>
+                  <textarea id="request_details" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>
+
+                </div>
+              </div>
+            </div><!--/.row-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="reason">Reason:</label>
+                  <input type="text" class="form-control" id="reason" placeholder="Reason for closing">
+                </div>
+              </div>
+            </div><!--/.row-->
+          </div>
+          <!--<div class="card-footer">-->
+          <!--&lt;!&ndash;<button class="btn btn-sm btn-default" type="button" data-toggle="modal" (click)="cancelWorkRequestModal.show()">Close Work Request</button>&ndash;&gt;-->
+          <!--<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders']"><i class="fa fa-dot-circle-o"></i>Create Work Order</button>-->
+          <!--</div>-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="verifyWorkRequestModal.hide(); cancelWorkRequestModal.show()">Cancel Work Request</button>
+        <button type="submit" class="btn btn-sm btn-primary pull-right" data-toggle="modal" (click)="verifyWorkRequestModal.hide()"><i class="fa fa-dot-circle-o"></i>Create Work Order</button>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #assignWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="assignWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Assign Work Request</h4>
+        <button type="button" class="close" (click)="assignWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-header">
+            <strong>Work Request Number - SM-0170</strong>
+          </div>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-6">
+                <img width="240px" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/175/cache/room-air-conditioner_17521_600x450.jpg"/>
+              </div>
+              <div class="col-sm-6">
+                <table>
+                  <tr>
+                    <th>Staff ID:</th><td>87223</td>
+                  </tr>
+                  <tr>
+                    <th>Department:</th><td>Human Resource</td>
+                  </tr>
+                  <tr>
+                    <th>Name:</th><td>Pn Sophia Jamal</td>
+                  </tr>
+                  <tr>
+                    <th>Phone Number:</th><td>0108878288 </td>
+                  </tr>
+                  <tr>
+                    <th>Email:</th><td>sophia.j@gmail.com </td>
+                  </tr>
+                  <tr>
+                    <th>Building:</th><td>Shenzen Mall</td>
+                  </tr>
+                  <tr>
+                    <th>Block:</th><td>G-2</td>
+                  </tr>
+                  <hr/>
+                  <tr>
+                    <th>Request Details:</th><td>Aircond not functioning. Air blowing, but not cold.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <br/>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait">Job Trait</label>
+              <div class="col-md-9">
+                <select id="job_trait" name="job_trait" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Mechanical</option>
+                  <option value="2">Electrical</option>
+                  <option value="3">Civil</option>
+                  <option value="4">Housekeeping</option>
+                  <option value="5">Gardening and Landscaping</option>
+
+                  <option value="6">Pest Control</option>
+
+                  <option value="7">Security</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type">Job Type</label>
+              <div class="col-md-9">
+                <select id="job_type" name="job_type" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Planned Preventive Maintenance </option>
+                  <option value="2">Service Contract Maintenance</option>
+                  <option value="3">Corrective Maintenance</option>
+                  <option value="4">Routine Inspection</option>
+                  <option value="5">Event</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type">High Priority</label>
+              <div class="col-md-9">
+                <label class="">
+                  <input type="checkbox">
+                </label>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type">Assign To</label>
+              <div class="col-md-9">
+                <select id="job_type" name="job_type" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Henry Welding</option>
+                  <option value="2">Sandra Lee</option>
+                  <option value="3">Leonard Tan</option>
+                  <option value="4">Jessica Liew</option>
+                  <option value="5">Jason Wong</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--<div class="card-footer">-->
+          <!--<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-requests/verification']"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+          <!--</div>-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="assignWorkRequestModal.hide(); cancelWorkRequestModal.show()">Cancel Work Request</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="assignWorkRequestModal.hide(); assignSuccessWorkRequestModal.show()">Assign Work Request</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #cancelWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="cancelWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cancel Work Request</h4>
+        <button type="button" class="close" (click)="cancelWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="reason">Reason:</label>
+          <input type="text" class="form-control" id="reason" placeholder="Reason for closing Work Request">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #assignWorkOrderModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="assignWorkOrderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Assign Work Order</h4>
+        <button type="button" class="close" (click)="assignWorkOrderModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-header">
+            <strong>Work Order Number - SM-1056</strong>
+          </div>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-6">
+                <!--<img width="240px" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/175/cache/room-air-conditioner_17521_600x450.jpg"/>-->
+              </div>
+              <div class="col-sm-6">
+                <table>
+                  <tr>
+                    <th>Staff ID:</th><td>81255</td>
+                  </tr>
+                  <tr>
+                    <th>Department:</th><td>Sales</td>
+                  </tr>
+                  <tr>
+                    <th>Name:</th><td>Hilda Brand</td>
+                  </tr>
+                  <tr>
+                    <th>Phone Number:</th><td>0116783326 </td>
+                  </tr>
+                  <tr>
+                    <th>Email:</th><td>hilda.b@gmail.com </td>
+                  </tr>
+                  <tr>
+                    <th>Building:</th><td>Shenzen Mall</td>
+                  </tr>
+                  <tr>
+                    <th>Block:</th><td>G-2, 2nd Floor Stairwell</td>
+                  </tr>
+                  <hr/>
+                  <tr>
+                    <th>Request Details:</th><td>No lighting in 2nd floor stairwell.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <br/>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label" for="request_time"><strong>Requested On:</strong></label>
+              <div class="col-md-8">
+                18/05/2017 - 9.48am
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label" for="request_time"><strong>Person In Charge:</strong></label>
+              <div class="col-md-8">
+                Harris Pewter
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label"><strong>Verified by:</strong></label>
+
+              <div class="col-md-8">
+                Jessica Liew
+                <br/>
+                via Visual Inspection
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label"><strong>Comments:</strong></label>
+
+              <div class="col-md-8">
+                Bulb needs replacement
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label" for="verified_time"><strong>Verified On:</strong></label>
+              <div class="col-md-8">
+                18/05/2017 - 10.28am
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-md-3 form-control-label" for="job_type"><strong>Estimated Hours:</strong></label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="est_hours" placeholder="Enter estimated hours">
+              </div>
+            </div><!--/.row-->
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type">Assign To</label>
+              <div class="col-md-9">
+                <select id="job_type" name="job_type" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Henry Welding</option>
+                  <option value="2">Sandra Lee</option>
+                  <option value="3">Leonard Tan</option>
+                  <option value="4">Jessica Liew</option>
+                  <option value="5">Jason Wong</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--<div class="card-footer">-->
+          <!--<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-requests/verification']"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+          <!--</div>-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!--<button type="button" class="btn btn-secondary" data-toggle="modal" (click)="assignWorkRequestModal.hide(); cancelWorkRequestModal.show()">Cancel Work Request</button>-->
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="assignWorkOrderModal.hide();">Assign Work Order</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #assignSuccessWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="assignSuccessWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Successfully Assigned Work Request</h4>
+        <button type="button" class="close" (click)="assignSuccessWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <h4>To: Jason Wong</h4>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="assignSuccessWorkRequestModal.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--<div bsModal #closeWorkOrderModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="closeWorkOrderModalLabel" aria-hidden="true">-->
+<!--<div class="modal-dialog modal-lg" role="document">-->
+<!--<div class="modal-content">-->
+<!--<div class="modal-header">-->
+<!--<h4 class="modal-title">Close Work Order</h4>-->
+<!--<button type="button" class="close" (click)="closeWorkOrderModal.hide()" aria-label="Close">-->
+<!--<span aria-hidden="true">&times;</span>-->
+<!--</button>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--<div class="card">-->
+<!--<div class="card-header">-->
+<!--<strong>Work Order Completion</strong>-->
+<!--</div>-->
+
+<!--<div class="card-block">-->
+<!--<div class="form-group row">-->
+<!--<label class="col-md-3 form-control-label" for="job_trait">Action Taken</label>-->
+<!--<div class="col-md-9">-->
+<!--<select id="job_trait" name="job_trait" class="form-control">-->
+<!--<option value="0">Repair</option>-->
+<!--<option value="1">Clean</option>-->
+<!--<option value="2">Replace</option>-->
+<!--<option value="3">Testing and Commissioning</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--<div class="col-sm-12">-->
+<!--<div class="form-group">-->
+<!--<label for="action_description">Action Description:</label>-->
+<!--<textarea id="action_description" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
+<!--<div class="row">-->
+<!--<div class="col-sm-12">-->
+<!--<div class="form-group">-->
+<!--<label for="action_description">Spare Parts/Consumables:</label>-->
+<!--<div class="row">-->
+<!--<div class="col-sm-4">-->
+<!--Part Name-->
+
+<!--<input type="text" class="form-control" id="part1" placeholder="Enter part name">-->
+
+<!--<input type="text" class="form-control" id="part2" placeholder="Enter part name">-->
+
+<!--<input type="text" class="form-control" id="part3" placeholder="Enter part name">-->
+<!--</div>-->
+<!--<div class="col-sm-4">-->
+<!--Part Code-->
+
+<!--<input type="text" class="form-control" id="part_code1" placeholder="Enter part code">-->
+
+<!--<input type="text" class="form-control" id="part_code2" placeholder="Enter part code">-->
+
+<!--<input type="text" class="form-control" id="part_code3" placeholder="Enter part code">-->
+<!--</div>-->
+<!--<div class="col-sm-4">-->
+<!--Quantity-->
+
+<!--<input type="text" class="form-control" id="part_quantity1" placeholder="Enter quantity">-->
+
+<!--<input type="text" class="form-control" id="part_quantity2" placeholder="Enter quantity">-->
+
+<!--<input type="text" class="form-control" id="part_quantity3" placeholder="Enter quantity">-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
+<!--<div class="row">-->
+<!--<div class="col-sm-12">-->
+<!--<div class="form-group">-->
+<!--<label for="cost_of_work">Cost of Work</label>-->
+<!--<input type="text" class="form-control" id="cost_of_work" placeholder="Enter total cost">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--<div class="col-sm-12">-->
+<!--<div class="form-group">-->
+<!--<label for="name"><strong>Work verified by:</strong></label>-->
+<!--Ir. Harris Khalid-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
+<!--<div class="form-group row">-->
+<!--<label class="col-md-3 form-control-label" for="file-input">Image Upload</label>-->
+<!--<div class="col-md-9">-->
+<!--<input type="file" id="file-input" name="file-input">-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--&lt;!&ndash;<div class="card-footer">&ndash;&gt;-->
+<!--&lt;!&ndash;<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders/report']">Close Work Order</button>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--&lt;!&ndash;<button type="button" class="btn btn-secondary" data-toggle="modal" (click)="closeWorkOrderModal.hide()">Cancel</button>&ndash;&gt;-->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" (click)="closeWorkOrderModal.hide()">Close Work Order</button>-->
+<!--</div>-->
+<!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+<!--</div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
