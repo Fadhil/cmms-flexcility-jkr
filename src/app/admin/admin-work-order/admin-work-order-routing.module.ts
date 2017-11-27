@@ -150,10 +150,10 @@ const routes: Routes = [
         ]
       },
       {
-        path: '',
+        path: 'all',
         component: AdminWorkOrderHomeComponent,
         data: {
-          title: ''
+          title: 'All'
         },
         children: [
           {

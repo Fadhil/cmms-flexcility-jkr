@@ -34,7 +34,8 @@ import { AdminWorkOrderQuotationViewComponent } from './admin-work-order-quotati
     ReactiveFormsModule,
     ModalModule.forRoot(),
     AdminWorkOrderRoutingModule,
-    ImageUploadModule.forRoot()
+    ImageUploadModule.forRoot(),
+   
   ],
   declarations: [AdminWorkOrderHomeComponent, AdminWorkOrderNewComponent, AdminWorkOrderViewComponent, AdminWorkOrderEditComponent
 , AdminWorkOrderReportComponent, AdminWorkOrderOpenComponent, AdminWorkOrderOngoingComponent, AdminWorkOrderClosedComponent, AdminWorkOrderQuotationComponent, AdminWorkOrderOpenViewComponent, AdminWorkOrderOpenEditComponent, AdminWorkOrderOpenAssessmentComponent, AdminWorkOrderOngoingViewComponent, AdminWorkOrderOngoingEditComponent, AdminWorkOrderOngoingCompletionComponent, AdminWorkOrderClosedViewComponent, AdminWorkOrderClosedCompletionComponent, AdminWorkOrderQuotationCompletionComponent, AdminWorkOrderQuotationEditComponent, AdminWorkOrderQuotationViewComponent]
