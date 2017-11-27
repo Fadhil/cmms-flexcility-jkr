@@ -1,6 +1,7 @@
 export interface Complete {
-    action: string;
-    description: string;
+    finding: string;
+    further: string;
+    corrective: string;
     cost: string;
     manpower: string;
     method: string;

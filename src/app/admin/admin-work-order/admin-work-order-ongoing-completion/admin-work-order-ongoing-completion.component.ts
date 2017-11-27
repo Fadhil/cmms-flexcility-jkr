@@ -15,8 +15,9 @@ export class AdminWorkOrderOngoingCompletionComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this._fb.group({
-      action: [''],
-      description: [''],
+      finding: [''],
+      further: [''],
+      corrective: [''],
       cost: [''],
       manpower: [''],
       method: [''],
