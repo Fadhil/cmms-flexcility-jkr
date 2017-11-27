@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AdminWorkOrderRoutingModule } from './admin-work-order-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AdminWorkOrderNewComponent } from './admin-work-order-new/admin-work-order-new.component';
 import { AdminWorkOrderViewComponent } from './admin-work-order-view/admin-work-order-view.component';
@@ -26,7 +27,6 @@ import { AdminWorkOrderQuotationCompletionComponent } from './admin-work-order-q
 import { AdminWorkOrderQuotationEditComponent } from './admin-work-order-quotation-edit/admin-work-order-quotation-edit.component';
 import { AdminWorkOrderQuotationViewComponent } from './admin-work-order-quotation-view/admin-work-order-quotation-view.component';
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -35,6 +35,7 @@ import { AdminWorkOrderQuotationViewComponent } from './admin-work-order-quotati
     ModalModule.forRoot(),
     AdminWorkOrderRoutingModule,
     ImageUploadModule.forRoot(),
+    TabsModule.forRoot()
    
   ],
   declarations: [AdminWorkOrderHomeComponent, AdminWorkOrderNewComponent, AdminWorkOrderViewComponent, AdminWorkOrderEditComponent
