@@ -3,7 +3,7 @@
       <div class="card">
         <div class="card-header">
           <i class="fa fa-align-justify"></i><strong> List of Work Order </strong>
-        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/admin/workorder/new']"></i></div>
+        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/admin/workorder/all/new']"></i></div>
         <div class="card-block">
           <table class="table table-sm">
             <thead>
@@ -13,14 +13,14 @@
                 <th>Priority</th>
             </thead>
             <tbody>
-              <tr [routerLink]="['/admin/workorder/view']">
+              <tr [routerLink]="['/admin/workorder/all/view']">
                 <td>Pintu Rosak</td>
                 <td>2012/01/01</td>
                 <td><span class="badge badge-warning">IN PROGRESS</span></td>
                 <td><span class="badge badge-danger">High</span></td>
 
               </tr>
-              <tr [routerLink]="['/admin/workorder/view']">
+              <tr [routerLink]="['/admin/workorder/all/view']">
                 <td>Tandas Tersumbat</td>
                 <td>2012/02/01</td>
                 <td><span class="badge badge-success">CLOSED</span></td>

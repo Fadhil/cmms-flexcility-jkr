@@ -19,7 +19,6 @@ import { AdminAreaComponent } from './admin-area/admin-area.component';
 import { AdminDashboardWoWrComponent } from './admin-dashboard-wo-wr/admin-dashboard-wo-wr.component';
 import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-schedule.component';
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -29,7 +28,8 @@ import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-sch
     ChartsModule,
     AngularMultiSelectModule,
     AdminRoutingModule,
-    ImageUploadModule.forRoot()
+    ImageUploadModule.forRoot(),
+
   ],
   // tslint:disable-next-line:max-line-length
   declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent, AdminDashboardComponent, AdminBuildingComponent, AdminAreaComponent, AdminDashboardWoWrComponent, AdminWorkScheduleComponent ]

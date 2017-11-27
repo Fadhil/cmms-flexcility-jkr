@@ -15,6 +15,7 @@ import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 import { LoggingService } from './logging.service';
 import { HttpModule } from '@angular/http';
 import { AllDataService } from './all-data';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
@@ -56,7 +57,8 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(AllDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
    
 
   ],
