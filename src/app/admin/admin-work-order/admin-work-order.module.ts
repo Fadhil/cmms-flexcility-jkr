@@ -6,6 +6,7 @@ import { AdminWorkOrderRoutingModule } from './admin-work-order-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgxGalleryModule } from 'ngx-gallery';
 import { AdminWorkOrderNewComponent } from './admin-work-order-new/admin-work-order-new.component';
 import { AdminWorkOrderViewComponent } from './admin-work-order-view/admin-work-order-view.component';
 import { AdminWorkOrderEditComponent } from './admin-work-order-edit/admin-work-order-edit.component';
@@ -35,8 +36,8 @@ import { AdminWorkOrderQuotationViewComponent } from './admin-work-order-quotati
     ModalModule.forRoot(),
     AdminWorkOrderRoutingModule,
     ImageUploadModule.forRoot(),
-    TabsModule.forRoot()
-   
+    TabsModule.forRoot(),
+    NgxGalleryModule
   ],
   declarations: [AdminWorkOrderHomeComponent, AdminWorkOrderNewComponent, AdminWorkOrderViewComponent, AdminWorkOrderEditComponent
 , AdminWorkOrderReportComponent, AdminWorkOrderOpenComponent, AdminWorkOrderOngoingComponent, AdminWorkOrderClosedComponent, AdminWorkOrderQuotationComponent, AdminWorkOrderOpenViewComponent, AdminWorkOrderOpenEditComponent, AdminWorkOrderOpenAssessmentComponent, AdminWorkOrderOngoingViewComponent, AdminWorkOrderOngoingEditComponent, AdminWorkOrderOngoingCompletionComponent, AdminWorkOrderClosedViewComponent, AdminWorkOrderClosedCompletionComponent, AdminWorkOrderQuotationCompletionComponent, AdminWorkOrderQuotationEditComponent, AdminWorkOrderQuotationViewComponent]

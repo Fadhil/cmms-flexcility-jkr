@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-admin-work-order-new',
   templateUrl: './admin-work-order-new.component.html',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminWorkOrderNewComponent implements OnInit {
 
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+
   }
 
 }

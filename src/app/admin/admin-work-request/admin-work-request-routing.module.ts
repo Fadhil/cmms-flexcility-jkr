@@ -29,40 +29,40 @@ const routes: Routes = [
     },
     children: [
       {
-        path: '',
+        path: 'all',
         component: AdminWorkRequestHomeComponent,
         data: {
           title: ''
         },
         children:[
-                  {
-                    path: 'new',
-                    component: AdminWorkRequestNewComponent,
-                    data: {
-                       title: 'New'
-                      }
-                  },
-                  {
-                    path: 'view',
-                    component: AdminWorkRequestViewComponent,
-                    data: {
-                      title: 'View'
-                    }
-                  },
-                  {
-                    path: 'edit',
-                    component: AdminWorkRequestEditComponent,
-                    data: {
-                     title: 'Edit'
-                    }
-                   },
-                   {
-                    path: 'verification',
-                    component: AdminWorkRequestVerificationComponent,
-                    data: {
-                      title: 'Verfication'
-                    }
-                  }
+          {
+            path: 'new',
+            component: AdminWorkRequestNewComponent,
+            data: {
+                title: 'New'
+              }
+          },
+          {
+            path: 'view',
+            component: AdminWorkRequestViewComponent,
+            data: {
+              title: 'View'
+            }
+          },
+          {
+            path: 'edit',
+            component: AdminWorkRequestEditComponent,
+            data: {
+              title: 'Edit'
+            }
+            },
+            {
+            path: 'verification',
+            component: AdminWorkRequestVerificationComponent,
+            data: {
+              title: 'Verfication'
+            }
+          }
         ]
       },
       {

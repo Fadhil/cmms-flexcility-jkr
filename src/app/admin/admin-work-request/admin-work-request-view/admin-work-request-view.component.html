@@ -2,16 +2,13 @@
 <div class="col-sm-12">
       <div class="card">
         <div class="card-header">
-          <strong>PC Rosak</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal2.show()"></i>
-          <i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/workrequest/edit']"></i><i class="fa fa-check pull-right" style="font-size:23px" [routerLink]="['/admin/workrequest/verification']"></i>
+          <strong>View Work Request</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal2.show()"></i>
+          <i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/workrequest/all/edit']"></i><i class="fa fa-check pull-right" style="font-size:23px" [routerLink]="['/admin/workrequest/all/verification']"></i>
         </div>
+        
         <div class="card-block">
-          <div class="row">
-            <div class="col-sm-8">
-              <img width="100px" src="https://d284x0ytlho6sy.cloudfront.net/images/CPC/55/Customliquidthumb.jpg"/>
-            </div>
-          </div>
-          <br/>
+          <tabset>
+            <tab heading="Main">
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Status</strong></label>
             <div class="col-md-9">
@@ -65,7 +62,12 @@
             <div class="col-md-9">
               <a href="http://localhost:4200/#/admin/user/view" >Fadhil Luqman</a> 
             </div>
-          </div>  
+          </div> 
+          </tab>
+          <tab heading="Photo">
+              <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+          </tab>
+          </tabset> 
       </div>
       </div>
     </div><!--/.col-->

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxGalleryModule } from 'ngx-gallery';
 import { AdminWorkRequestRoutingModule } from './admin-work-request-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -33,6 +35,8 @@ import { AdminWrCancelledConfirmationComponent } from './admin-wr-cancelled-conf
     ReactiveFormsModule,
     ModalModule.forRoot(),
     AdminWorkRequestRoutingModule,
+    TabsModule.forRoot(),
+    NgxGalleryModule,
     ImageUploadModule.forRoot()
   ],
   declarations: [ AdminWorkRequestHomeComponent, AdminWorkRequestNewComponent, AdminWorkRequestEditComponent, AdminWorkRequestViewComponent, AdminWorkRequestVerificationComponent, AdminWrNewComponent, AdminWrOpenComponent, AdminWrVerifiedComponent, AdminWrCancelledComponent, AdminWrNewViewComponent, AdminWrNewVerificationComponent, AdminWrNewEditComponent, AdminWrOpenViewComponent, AdminWrOpenEditComponent, AdminWrOpenVerificationComponent, AdminWrVerifiedViewComponent, AdminWrVerifiedAssignComponent, AdminWrCancelledViewComponent, AdminWrCancelledConfirmationComponent]
