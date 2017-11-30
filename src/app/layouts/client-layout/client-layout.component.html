@@ -46,7 +46,6 @@
     </li>
   </ul>
 </header>
-
 <div class="app-body">
   <div class="sidebar">
     <nav class="sidebar-nav">
@@ -58,31 +57,27 @@
         <!-- <li class="nav-title">
           Work Request
         </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/service-requisition']"><i class="icon-wrench"></i> Service Requisition </a>
-        </li> -->
-         <!-- <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['client/']"><i class="icon-eye"></i> Work Request </a>
-        </li>  -->
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/client/workrequest']"><i class="fa fa-exclamation-circle"></i> Work Request </a>
+        </li> 
       </ul>
     </nav>
   </div>
-
   <!-- Main content -->
   <main class="main">
 
     <!-- Breadcrumb -->
-    <!--<ol class="breadcrumb">-->
-      <!--<app-breadcrumbs></app-breadcrumbs>-->
+    <ol class="breadcrumb">
+      <app-breadcrumbs></app-breadcrumbs>
       <!--&lt;!&ndash; Breadcrumb Menu&ndash;&gt;-->
-      <!--<li class="breadcrumb-menu d-md-down-none">-->
-        <!--<div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
-          <!--<a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>-->
-          <!--<a class="btn btn-secondary" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>-->
-          <!--<a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>-->
-        <!--</div>-->
-      <!--</li>-->
-    <!--</ol>-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+          <a class="btn btn-secondary" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+          <a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+        </div>
+      </li>
+    </ol>
 
     <div class="container-fluid">
       <alert></alert>

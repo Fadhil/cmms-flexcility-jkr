@@ -24,8 +24,8 @@ export class ClientLayoutComponent implements OnInit {
 
     let body = document.getElementsByTagName('body')[0];
 
-    body.classList.remove("sidebar-fixed"); //remove the class
-
-    body.classList.add("sidebar-hidden"); //add the class
+    body.classList.remove("sidebar-hidden"); //remove the class
+    
+    body.classList.add("sidebar-fixed"); //add the class
   }
 }

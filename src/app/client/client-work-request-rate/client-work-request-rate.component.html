@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Submit Request</strong>
+        </div>
+            <div class="card-block">
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="org_name">Rating:</label>
+                    <input type="text" class="form-control" id="rate_star" placeholder="Rating">
+                  </div>
+                  <div class="form-group">
+                    <label for="org_name">Remark:</label>
+                    <textarea class="form-control" id="remark" rows="3" placeholder="Remark"></textarea>
+                  </div>  
+                </div>
+              </div><!--/.row-->
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/client/workrequest/view']">Submit</button>
+            </div>
+      </div>
+    </div>
+    </div>
+    
