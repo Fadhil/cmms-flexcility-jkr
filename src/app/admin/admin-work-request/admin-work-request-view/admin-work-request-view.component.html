@@ -2,31 +2,50 @@
 <div class="col-sm-12">
       <div class="card">
         <div class="card-header">
-          <strong>View Work Request</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal2.show()"></i>
+          <strong>View Request</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal2.show()"></i>
           <i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/workrequest/all/edit']"></i><i class="fa fa-check pull-right" style="font-size:23px" [routerLink]="['/admin/workrequest/all/verification']"></i>
         </div>
-        
         <div class="card-block">
           <tabset>
             <tab heading="Main">
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>ID</strong></label>
+            <div class="col-md-9">
+              WR-101
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Title</strong></label>
+            <div class="col-md-9" style="text-align: justify">
+              Pintu Rosak
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_type"><strong>Details</strong></label>
+            <div class="col-md-9" style="text-align: justify">
+              Tombol pintu tercabut
+            </div>
+          </div> 
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Status</strong></label>
             <div class="col-md-9">
               <span class="badge badge-info">NEW</span>
             </div>
-          </div>
+          </div> 
           <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_trait"><strong>Request ID</strong></label>
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Priority</strong></label>
             <div class="col-md-9">
-              WR-101
+              <span class="badge badge-danger">HIGH</span>
             </div>
-          </div>        
+          </div>       
           <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_type"><strong>Request Details</strong></label>
-            <div class="col-md-9" style="text-align: justify">
-              PC tidak boleh dihidupkan
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Requested by</strong></label>
+            <div class="col-md-9">
+              <a href="http://localhost:4200/#/admin/user/view" >Fadhil Luqman</a> 
             </div>
-          </div>
+          </div> 
+          </tab>
+          <tab heading="Place">
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Site</strong></label>
             <div class="col-md-9">
@@ -42,27 +61,21 @@
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Area</strong></label>
             <div class="col-md-9">
-             Area B
+              Area B
             </div>
           </div>
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Date</strong></label>
             <div class="col-md-9">
-             2012/03/01
+              2012/03/01
             </div>
           </div>
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Time</strong></label>
             <div class="col-md-9">
-             2.15 PM
+              2.15 PM
             </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_trait"><strong>Requested by</strong></label>
-            <div class="col-md-9">
-              <a href="http://localhost:4200/#/admin/user/view" >Fadhil Luqman</a> 
             </div>
-          </div> 
           </tab>
           <tab heading="Photo">
               <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
