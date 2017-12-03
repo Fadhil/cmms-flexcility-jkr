@@ -18,6 +18,8 @@ import { AdminBuildingComponent } from './admin-building/admin-building.componen
 import { AdminAreaComponent } from './admin-area/admin-area.component';
 import { AdminDashboardWoWrComponent } from './admin-dashboard-wo-wr/admin-dashboard-wo-wr.component';
 import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-schedule.component';
+import { AdminDashboardHighlightComponent } from './admin-dashboard-highlight/admin-dashboard-highlight.component';
+import { AdminAddHighlightComponent } from './admin-add-highlight/admin-add-highlight.component';
 
 @NgModule({
   imports: [
@@ -31,7 +33,22 @@ import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-sch
     ImageUploadModule.forRoot(),
 
   ],
-  // tslint:disable-next-line:max-line-length
-  declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent, AdminDashboardComponent, AdminBuildingComponent, AdminAreaComponent, AdminDashboardWoWrComponent, AdminWorkScheduleComponent ]
+
+  declarations: [
+    AdminOrganizationComponent,
+    AdminSiteComponent,
+    AdminAssetComponent,
+    AdminUserComponent,
+    AdminTeamComponent,
+    AdminWorkRequestComponent,
+    AdminWorkOrderComponent,
+    AdminDashboardComponent,
+    AdminBuildingComponent,
+    AdminAreaComponent,
+    AdminDashboardWoWrComponent,
+    AdminWorkScheduleComponent,
+    AdminDashboardHighlightComponent,
+    AdminAddHighlightComponent
+]
 })
 export class AdminModule { }

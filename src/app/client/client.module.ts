@@ -11,8 +11,8 @@ import { ClientServiceRequisitionSummaryComponent } from './client-service-requi
 import { ClientWorkRequestComponent } from './client-work-request/client-work-request.component';
 import { ClientWorkRequestViewComponent } from './client-work-request-view/client-work-request-view.component';
 import { ClientWorkRequestRateComponent } from './client-work-request-rate/client-work-request-rate.component';
+import { StarRatingModule } from 'angular-star-rating';
 import { HomeComponent } from './home/home.component';
-
 
 @NgModule({
   imports: [
@@ -20,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     ClientRoutingModule,
     ImageUploadModule.forRoot(),
     TabsModule.forRoot(),
-    NgxGalleryModule
+    NgxGalleryModule,
+    StarRatingModule.forRoot()
   ],
   declarations: [
     ClientServiceRequisitionComponent,

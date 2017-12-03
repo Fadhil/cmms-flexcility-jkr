@@ -13,6 +13,8 @@ import { AdminBuildingComponent } from './admin-building/admin-building.componen
 import { AdminAreaComponent } from './admin-area/admin-area.component';
 import { AdminDashboardWoWrComponent } from './admin-dashboard-wo-wr/admin-dashboard-wo-wr.component';
 import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-schedule.component';
+import { AdminDashboardHighlightComponent } from './admin-dashboard-highlight/admin-dashboard-highlight.component';
+import { AdminAddHighlightComponent } from './admin-add-highlight/admin-add-highlight.component';
 
 
 const routes: Routes = [
@@ -63,14 +65,30 @@ const routes: Routes = [
         component: AdminDashboardComponent,
         data: {
         title: 'Dashboard'
-          }   
+          }
       },
       {
         path: 'dashboard2',
         component: AdminDashboardWoWrComponent,
         data: {
         title: 'Dashboard Work Order and Work Request'
-          }   
+          }
+      },
+      {
+        path: 'dashboard3',
+        component: AdminDashboardHighlightComponent,
+        data: {
+        title: 'Dashboard Highlight'
+          },
+        children: [
+          {
+            path: 'new',
+            component: AdminAddHighlightComponent,
+            data: {
+            title: 'Add Highlight'
+              }
+          }
+        ]
       },
       {
         path: 'building',
