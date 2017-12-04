@@ -12,7 +12,7 @@ export class AdminWrVerifiedViewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.galleryOptions = [
       {
         height: '300px',

@@ -2,62 +2,34 @@
     <div class="col-sm-12">
           <div class="card">
             <div class="card-header">
-              <strong>PC Rosak</strong><i class="fa fa-times pull-right" style="font-size:22px" [routerLink]="['/helpdesk/openworkrequest']"></i>
+              <strong>View Work Request</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal2.show()"></i>
               <i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/helpdesk/openworkrequest/edit']"></i><i class="fa fa-check pull-right" style="font-size:23px" [routerLink]="['/helpdesk/openworkrequest/verification']"></i>
             </div>
             <div class="card-block">
-              <div class="row">
-                <div class="col-sm-8">
-                  <img width="240px" src="https://d284x0ytlho6sy.cloudfront.net/images/CPC/55/Customliquidthumb.jpg"/>
-                </div>
-              </div>
-              <br/>
+              <tabset>
+                <tab heading="Main">
               <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_trait"><strong>Status</strong></label>
-                <div class="col-md-9">
-                  <span class="badge badge-warning">OPEN</span>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_trait"><strong>Request ID</strong></label>
+                <label class="col-md-3 form-control-label" for="job_trait"><strong>ID</strong></label>
                 <div class="col-md-9">
                   WR-101
                 </div>
-              </div>        
+              </div>
               <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_type"><strong>Request Details</strong></label>
+                <label class="col-md-3 form-control-label" for="job_trait"><strong>Title</strong></label>
+                <div class="col-md-9">
+                  Pintu Rosak
+                </div>
+              </div>          
+              <div class="form-group row">
+                <label class="col-md-3 form-control-label" for="job_type"><strong>Details</strong></label>
                 <div class="col-md-9" style="text-align: justify">
-                  PC tidak boleh dihidupkan
+                  Tombol pintu tercabut
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_trait"><strong>Site</strong></label>
+                <label class="col-md-3 form-control-label" for="job_trait"><strong>Priority</strong></label>
                 <div class="col-md-9">
-                  Wilayah Persekutuan
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_trait"><strong>Building</strong></label>
-                <div class="col-md-9">
-                  Block B
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_trait"><strong>Area</strong></label>
-                <div class="col-md-9">
-                 Area B
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_trait"><strong>Date</strong></label>
-                <div class="col-md-9">
-                 2012/03/01
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-md-3 form-control-label" for="job_trait"><strong>Time</strong></label>
-                <div class="col-md-9">
-                 2.15 PM
+                  <span class="badge badge-info">NORMAL</span>
                 </div>
               </div>
               <div class="form-group row">
@@ -65,9 +37,65 @@
                 <div class="col-md-9">
                   <a href="http://localhost:4200/#/admin/user/view" >Fadhil Luqman</a> 
                 </div>
-              </div>  
+              </div> 
+              </tab>
+              <tab heading="Place">
+                <div class="form-group row">
+                    <label class="col-md-3 form-control-label" for="job_trait"><strong>Site</strong></label>
+                    <div class="col-md-9">
+                      Wilayah Persekutuan
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 form-control-label" for="job_trait"><strong>Building</strong></label>
+                    <div class="col-md-9">
+                      Block B
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 form-control-label" for="job_trait"><strong>Area</strong></label>
+                    <div class="col-md-9">
+                      Area B
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 form-control-label" for="job_trait"><strong>Date</strong></label>
+                    <div class="col-md-9">
+                      2012/03/01
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 form-control-label" for="job_trait"><strong>Time</strong></label>
+                    <div class="col-md-9">
+                      2.15 PM
+                    </div>
+                  </div>
+                </tab>
+              <tab heading="Photo">
+                  <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>            
+              </tab>
+              </tabset> 
           </div>
           </div>
         </div><!--/.col-->
     </div>
     
+    <div bsModal #dangerModal2="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-danger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Delete User</h4>
+            <button type="button" class="close" (click)="dangerModal2.hide()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Sure want to delete?&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="dangerModal2.hide()">Close</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/helpdesk/openworkrequest']" >Delete</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->

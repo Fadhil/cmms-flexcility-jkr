@@ -3,34 +3,39 @@
       <div class="card">
         <div class="card-header">
           <i class="fa fa-align-justify" [routerLink]="['/tech/workrequest']"></i><strong> List of Work request </strong>
-        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/helpdesk/workrequest/new']"></i></div>
+        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/helpdesk/allworkrequest/new']"></i></div>
         <div class="card-block">
           <table class="table table-sm">
-            <thead>        
-                <th>Request</th>
+            <thead> 
+                <th>ID</th>       
+                <th>Title</th>
                 <th>Date</th>
                 <th>Requestor</th>  
             </thead>
             <tbody>
-              <tr [routerLink]="['/helpdesk/workrequest/view']">
+              <tr [routerLink]="['/helpdesk/allworkrequest/view']">
+                <td>WR-101</td>
                 <td>Pintu Rosak</td>
                 <td>2012/01/01</td>
                 <td>Tony Wang</td>
 
               </tr>
-              <tr [routerLink]="['/helpdesk/workrequest/view']">
+              <tr [routerLink]="['/helpdesk/allworkrequest/view']">
+                <td>WR-102</td>
                 <td>Tandas Tersumbat</td>
                 <td>2012/02/01</td>
                 <td>Jalal Tambi</td>
  
               </tr>
-              <tr [routerLink]="['/helpdesk/workrequest/view']">
+              <tr [routerLink]="['/helpdesk/allworkrequest/view']">
+                <td>WR-103</td>
                 <td>Lampu Rosak</td>
                 <td>2012/02/01</td>
                 <td>nanako matsushima</td>
 
               </tr>
-              <tr [routerLink]="['/helpdesk/workrequest/view']">
+              <tr [routerLink]="['/helpdesk/allworkrequest/view']">
+                <td>WR-104</td>
                 <td>LCD Projector Offline</td>
                 <td>2012/03/01</td>
                 <td>akira</td>

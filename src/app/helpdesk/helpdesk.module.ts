@@ -36,7 +36,8 @@ import { HelpdeskScheduleEditComponent } from './helpdesk-schedule/helpdesk-sche
 import { HelpdeskScheduleNewComponent } from './helpdesk-schedule/helpdesk-schedule-new/helpdesk-schedule-new.component';
 import { HelpdeskScheduleViewComponent } from './helpdesk-schedule/helpdesk-schedule-view/helpdesk-schedule-view.component';
 import {CalendarModule} from "ap-angular2-fullcalendar";
-
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 @NgModule({
   imports: [
@@ -46,6 +47,8 @@ import {CalendarModule} from "ap-angular2-fullcalendar";
     HelpdeskRoutingModule,
     ModalModule.forRoot(),
     ImageUploadModule.forRoot(),
+    TabsModule.forRoot(),
+    NgxGalleryModule,
     CalendarModule
   ],
   declarations: [

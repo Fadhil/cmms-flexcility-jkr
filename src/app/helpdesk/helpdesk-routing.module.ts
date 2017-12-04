@@ -90,10 +90,10 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'workrequest',
+        path: 'allworkrequest',
         component: HelpdeskWorkRequestHomeComponent,
         data: {
-          title: 'Work Request'
+          title: 'All Work Request'
         },
         children:[
         {
