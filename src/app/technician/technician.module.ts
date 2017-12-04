@@ -8,7 +8,10 @@ import { TechnicianRoutingModule } from './technician-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { TechWorkRequestComponent } from './tech-work-request/tech-work-request.component';
 import { TechWorkOrderComponent } from './tech-work-order/tech-work-order.component';
-
+import { TechDashboardComponent } from './tech-dashboard/tech-dashboard.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 @NgModule({
   imports: [
@@ -16,11 +19,19 @@ import { TechWorkOrderComponent } from './tech-work-order/tech-work-order.compon
     FormsModule,
     ReactiveFormsModule,
     ChartsModule,
+    ModalModule.forRoot(),
     AngularMultiSelectModule,
     TechnicianRoutingModule,
-    ImageUploadModule.forRoot()
+    ImageUploadModule.forRoot(),
+    TabsModule.forRoot(),
+    NgxGalleryModule,
+
   ],
-  // tslint:disable-next-line:max-line-length
-  declarations: [TechWorkRequestComponent, TechWorkOrderComponent]
+
+  declarations: [
+    TechWorkRequestComponent, 
+    TechWorkOrderComponent,
+    TechDashboardComponent
+]
 })
 export class TechnicianModule { }

@@ -1,27 +1,52 @@
 <div class="row">
+    <div class="col-sm-12">
+      <div class="card" style="background-color:white;">
+        <div class="card-block">
+            <div class="col-sm-12">
+            <table style="width:70%" align="center" >
+            <tr>
+            <td><div class="input-group">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+              </span>
+              <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="Search Work Order">
+              </div>
+            </td>
+            </tr>
+            </table>
+  
+            </div>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div>
+<div class="row">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header">
           <i class="fa fa-align-justify"></i><strong> List of Work Order </strong>
-        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/engineer/workorder/new']"></i>
+        <i  class="fa fa-plus-circle pull-right" style="font-size:25px;" [routerLink]="['/engineer/allworkorder/new']"></i>
       </div>
         <div class="card-block">
           <table class="table table-sm">
             <thead>
-                <th>Request</th>
+                <th>ID</th>
+                <th>Title</th>
                 <th>Date</th>
                 <th>Status</th>
                 <th>Priority</th>
             </thead>
             <tbody>
-              <tr [routerLink]="['/engineer/workorder/view']">
+              <tr [routerLink]="['/engineer/allworkorder/view']">
+                <td>WO-101</td>
                 <td>Pintu Rosak</td>
                 <td>2012/01/01</td>
                 <td><span class="badge badge-warning">IN PROGRESS</span></td>
                 <td><span class="badge badge-danger">High</span></td>
 
               </tr>
-              <tr [routerLink]="['/engineer/workorder/view']">
+              <tr [routerLink]="['/engineer/allworkorder/view']">
+                <td>WO-102</td>
                 <td>Tandas Tersumbat</td>
                 <td>2012/02/01</td>
                 <td><span class="badge badge-success">CLOSED</span></td>

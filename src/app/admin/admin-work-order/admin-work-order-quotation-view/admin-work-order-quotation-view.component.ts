@@ -12,7 +12,7 @@ export class AdminWorkOrderQuotationViewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit():void  {
+  ngOnInit(): void  {
     this.galleryOptions = [
       {
 

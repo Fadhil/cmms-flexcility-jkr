@@ -31,7 +31,7 @@ import { EngWorkScheduleEditComponent } from './eng-work-schedule/eng-work-sched
 import { EngWorkScheduleViewComponent } from './eng-work-schedule/eng-work-schedule-view/eng-work-schedule-view.component';
 import { EngWorkScheduleListComponent } from './eng-work-schedule/eng-work-schedule-list/eng-work-schedule-list.component';
 import { EngWorkScheduleCalendarComponent } from './eng-work-schedule/eng-work-schedule-calendar/eng-work-schedule-calendar.component';
-
+import { EngWoQuotationEditComponent } from './eng-wo-quotation-edit/eng-wo-quotation-edit.component';
 
 const routes: Routes = [
   {
@@ -136,7 +136,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'workorder',
+        path: 'allworkorder',
         component: EngWorkOrderHomeComponent,
         data: {
         title: 'Work Order'
@@ -268,6 +268,13 @@ const routes: Routes = [
             component : EngWoQuotationViewComponent,
             data: {
               title : 'view'
+            }
+          },
+          {
+            path: 'edit',
+            component : EngWoQuotationEditComponent,
+            data: {
+              title : 'Edit'
             }
           }
         ]

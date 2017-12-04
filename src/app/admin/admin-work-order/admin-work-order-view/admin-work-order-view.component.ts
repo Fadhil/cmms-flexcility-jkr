@@ -12,7 +12,7 @@ export class AdminWorkOrderViewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit():void {
+  ngOnInit(): void {
 
     this.galleryOptions = [
       {

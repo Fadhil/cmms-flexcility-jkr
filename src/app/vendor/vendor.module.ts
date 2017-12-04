@@ -13,6 +13,7 @@ import { VendorWorkOrderCompletionComponent } from './vendor-work-order-completi
 import { VendorWorkRequestHomeComponent } from './vendor-work-request-home/vendor-work-request-home.component';
 import { VendorWorkRequestViewComponent } from './vendor-work-request-view/vendor-work-request-view.component';
 import { VendorWorkRequestQuotationComponent } from './vendor-work-request-quotation/vendor-work-request-quotation.component';
+import { VendorDashboardComponent } from './vendor-dashboard/vendor-dashboard.component';
 
 
 
@@ -33,7 +34,8 @@ import { VendorWorkRequestQuotationComponent } from './vendor-work-request-quota
     VendorWorkOrderCompletionComponent,
     VendorWorkRequestHomeComponent,
     VendorWorkRequestViewComponent,
-    VendorWorkRequestQuotationComponent
+    VendorWorkRequestQuotationComponent,
+    VendorDashboardComponent
 ]
 })
 export class VendorModule { }

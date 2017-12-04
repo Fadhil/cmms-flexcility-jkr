@@ -1,41 +1,106 @@
 <div class="row">    
-<div class="col-sm-12">
-      <div class="card">
-        <div class="card-header">
-          <strong>Completion</strong>
-        </div>
-
-        <div class="card-block">
-          <div class="row">
-            <div class="col-sm-8">
-              <div class="form-group">
-                <label for="reason">Action Taken:</label>
-                <input type="text" name="request_details"  class="form-control" placeholder="Action taken">
-
-              </div>
+    <div class="col-sm-12">
+        <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm)">
+          <div class="card">
+            <div class="card-header">
+              <strong>Work Order Completion</strong>
             </div>
+            <div class="card-block">
+                  <tabset>
+                    <tab heading="Main">
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <div class="form-group">
+                        <label for="reason">Finding:</label>
+                        <input type="text" formControlName="finding"  class="form-control" placeholder="Finding">
+                      </div>
+                    </div>
+                  </div>
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="reason">Further Action:</label>
+                    <textarea id="description" formControlName="further"  rows="4" class="form-control" placeholder="Further action"></textarea>
+                  </div>
+                </div>
+              </div><!--/.row-->
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="reason">Corrective Action:</label>
+                    <input type="text" formControlName="corrective"  class="form-control" placeholder="Corrective Action">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-10">
+                    <div class="form-group">
+                      <label for="reason">Estimation Cost:</label>
+                      <input type="text" formControlName="cost"  class="form-control" placeholder="Estimation Cost">
+                    </div>
+                  </div>
+                </div>
+                </tab>
+                <tab heading="Details">
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="reason">Manpower:</label>
+                    <input type="text" formControlName="manpower"  class="form-control" placeholder="Manpower">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="reason">Method:</label>
+                    <input type="text" formControlName="method"  class="form-control" placeholder="Method">
+                  </div>
+                </div>
+              </div>
+                    <div class="row">
+                      <div class="col-sm-10">
+                          <div formArrayName="materials">
+                              <div *ngFor="let material of myForm.controls.materials.controls; let i=index" class="panel panel-default">                  
+                        <div class="form-group">
+                          <label for="reason">Material {{i + 1}}:</label><i class="fa fa-times pull-right" *ngIf="myForm.controls.materials.controls.length > 1" style="font-size:20px" (click)="removeMaterial(i)"></i>
+                            <div class="panel-body" [formGroupName]="i">
+                              <input type="text" formControlName="name"  class="form-control" placeholder="Name">
+                              <input type="text" formControlName="quantity"  class="form-control" placeholder="Quantity">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="margin-10 pull-right">
+                        <a (click)="addMaterial()" style="font-size: 80%; cursor:default;">
+                            Add another material +
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              </tab>
+              <tab heading="Attachment">
+                <div class="form-group row">
+                    <label class="col-md-3 form-control-label" for="file-multiple-input">File: </label>
+                    <div class="col-md-9">
+                      <input type="file" id="file-multiple-input" name="file-multiple-input" multiple>
+                    </div>
+                  </div>
+              <div class="form-group row">
+                  <div class="col-md-10">
+                    <label for="org_name">Photo:</label>
+                    <image-upload></image-upload>
+                  </div>
+                </div>
+              </tab>
+              </tabset>
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/tech/workorder']"><i class="fa fa-dot-circle-o"></i>Submit</button>
+            </div>
+            
           </div>
-          <div class="row">
-            <div class="col-sm-8">
-              <div class="form-group">
-                <label for="reason">Action Description:</label>
-                <textarea id="description" name="request_details"  rows="4" class="form-control" placeholder="Action taken"></textarea>
-              </div>
-            </div>
-          </div><!--/.row-->
-          <div class="row">
-            <div class="col-sm-8">
-              <div class="form-group">
-                <label for="reason">Cost:</label>
-                <input type="text" name="request_details"  class="form-control" placeholder="Cost">
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/tech/workorder']"><i class="fa fa-dot-circle-o"></i>Submit</button>
-        </div>
-      </div>
+        
     </div>
-    
-</div>

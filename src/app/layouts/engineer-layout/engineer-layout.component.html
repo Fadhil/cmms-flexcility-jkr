@@ -64,8 +64,11 @@
         </li>
         <li class="divider"></li>
         <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
-          <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/engineer/workorder']"><i class="icon-wrench" ></i> Work Order</a>
+          <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/engineer/allworkorder']"><i class="icon-wrench" ></i> Work Order</a>
           <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/engineer/allworkorder']"><i class="fa fa-angle-right"></i> All</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" routerLinkActive="active" [routerLink]="['/engineer/openworkorder']"><i class="fa fa-angle-right"></i> Open</a>
             </li>

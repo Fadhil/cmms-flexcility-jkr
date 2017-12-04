@@ -6,7 +6,9 @@ import { EngineerRoutingModule } from './engineer-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgxGalleryModule } from 'ngx-gallery';
 import { EngWorkOrderHomeComponent } from './eng-work-order-home/eng-work-order-home.component';
 import { EngDashboardComponent } from './eng-dashboard/eng-dashboard.component';
 import { EngWorkOrderViewComponent } from './eng-work-order-view/eng-work-order-view.component';
@@ -39,6 +41,7 @@ import { EngWorkScheduleEditComponent } from './eng-work-schedule/eng-work-sched
 import { EngWorkScheduleViewComponent } from './eng-work-schedule/eng-work-schedule-view/eng-work-schedule-view.component';
 import { EngWorkScheduleListComponent } from './eng-work-schedule/eng-work-schedule-list/eng-work-schedule-list.component';
 import { EngWorkScheduleCalendarComponent } from './eng-work-schedule/eng-work-schedule-calendar/eng-work-schedule-calendar.component';
+import { EngWoQuotationEditComponent } from './eng-wo-quotation-edit/eng-wo-quotation-edit.component';
 
 
 
@@ -52,7 +55,9 @@ import { EngWorkScheduleCalendarComponent } from './eng-work-schedule/eng-work-s
     AngularMultiSelectModule,
     EngineerRoutingModule,
     ImageUploadModule.forRoot(),
-    CalendarModule
+    CalendarModule,
+    TabsModule.forRoot(),
+    NgxGalleryModule
   ],
 
   declarations: [
@@ -86,7 +91,8 @@ import { EngWorkScheduleCalendarComponent } from './eng-work-schedule/eng-work-s
   EngWorkScheduleEditComponent,
   EngWorkScheduleViewComponent,
   EngWorkScheduleListComponent,
-  EngWorkScheduleCalendarComponent
+  EngWorkScheduleCalendarComponent,
+    EngWoQuotationEditComponent
 ]
 })
 export class EngineerModule { }
