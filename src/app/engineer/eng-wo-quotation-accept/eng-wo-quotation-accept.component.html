@@ -1,7 +1,7 @@
 <div class="col-sm-12">
   <div class="card">
     <div class="card-header">
-      <strong>Purchase Order</strong>
+      <strong>Quotation</strong>
     </div>
     
     <div class="card-block">
@@ -63,15 +63,58 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-md-4 form-control-label"><strong>Work Order completion time:</strong></label>
+        <label class="col-md-4 form-control-label"><strong>Estimate completion time:</strong></label>
         <div class="col-md-8">
           60 minutes
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 form-control-label"><strong>Estimate Manpower:</strong></label>
+        <div class="col-md-8">
+          2
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 form-control-label"><strong>Estimate Method:</strong></label>
+        <div class="col-md-8">
+          Change new part
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 form-control-label"><strong>Estimate completion time:</strong></label>
+        <div class="col-md-8">
+          60 minutes
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 form-control-label"><strong>Estimate cost:</strong></label>
+        <div class="col-md-8">
+          RM 140
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 form-control-label"><strong>Material:</strong></label>
+        <div class="col-md-8">
+          <table>
+            <tr>
+              <th width="200px">Part</th>
+              <th width="50px">Quantity</th>
+            </tr>
+            <tr>
+              <td>30mm PVC Pipe</td>
+              <td>1 Unit</td>
+            </tr>
+            <tr>
+              <td>Tombol</td>
+              <td>1 Unit</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
     </div>
     <div class="card-footer">
-      <button type="submit" class="btn btn-sm btn-primary pull-right" ><i class="fa fa-dot-circle-o"></i>Accept</button>
+      <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/engineer/quotationworkorder/view']"><i class="fa fa-dot-circle-o"></i>Accept</button>
     </div>
   </div>
 </div>

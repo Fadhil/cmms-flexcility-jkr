@@ -18,14 +18,14 @@ calendarOptions: Object = {
     events: [
       {
         title: 'All Day Event',
-        start: '2017-09-01T08:00:00',
+        start: '2017-12-01T08:00:00',
         color: 'yellow',
         url: 'http://localhost:4200/#/admin/schedule/view',
         textColor: 'black'
       },
       {
         title: 'Long Event',
-        start: '2017-09-07T10:00:00',
+        start: '2017-12-07T10:00:00',
         end: '2017-09-10',
         color: 'red',
         url: 'http://localhost:4200/#/admin/schedule/view',
@@ -34,33 +34,33 @@ calendarOptions: Object = {
       {
         id: 999,
         title: 'Repeating Event',
-        start: '2017-09-09T15:00:00',
+        start: '2017-12-09T15:00:00',
         url: 'http://localhost:4200/#/admin/schedule/view',
         textColor: 'black'
       },
       {
         id: 999,
         title: 'Repeating Event',
-        start: '2017-09-16T15:00:00',
+        start: '2017-12-16T15:00:00',
         url: 'http://localhost:4200/#/admin/schedule/view',
         textColor: 'black'
       },
       {
         title: 'Conference',
-        start: '2017-09-11',
+        start: '2017-12-11',
         end: '2017-09-13',
         url: 'http://localhost:4200/#/admin/schedule/view',
         textColor: 'black'
       },
       {
         title: 'Click for Google',
-        start: '2017-09-22',
+        start: '2017-12-22',
         url: 'http://localhost:4200/#/admin/schedule/view',
         textColor: 'black'
       },
       {
-        title: 'Merdeka',
-        start: '2017-08-31',
+        title: 'Victoria',
+        start: '2017-12-31',
         url: 'http://localhost:4200/#/admin/schedule/view',
         textColor: 'black'
       }

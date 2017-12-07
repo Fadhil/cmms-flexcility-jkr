@@ -7,7 +7,8 @@ import { VendorWorkRequestHomeComponent } from './vendor-work-request-home/vendo
 import { VendorWorkRequestViewComponent } from './vendor-work-request-view/vendor-work-request-view.component';
 import { VendorWorkRequestQuotationComponent } from './vendor-work-request-quotation/vendor-work-request-quotation.component';
 import { VendorDashboardComponent } from './vendor-dashboard/vendor-dashboard.component';
-
+import { VendorWorkOrderEditComponent } from './vendor-work-order-edit/vendor-work-order-edit.component';
+import { VendorWorkRequestEditComponent } from './vendor-work-request-edit/vendor-work-request-edit.component';
 
 const routes: Routes = [
   {
@@ -30,7 +31,6 @@ const routes: Routes = [
         title: 'Work Order'
         },
         children: [
-
         {
           path: 'view',
           component: VendorWorkOrderViewComponent,
@@ -44,8 +44,14 @@ const routes: Routes = [
           data: {
             title: 'Completion'
           }
+        },
+        {
+          path: 'edit',
+          component: VendorWorkOrderEditComponent,
+          data: {
+            title: 'Edit'
+          }
         }
-
         ]
       },
       {
@@ -68,6 +74,13 @@ const routes: Routes = [
           component: VendorWorkRequestQuotationComponent,
           data: {
             title: 'Completion'
+          }
+        },
+        {
+          path: 'edit',
+          component: VendorWorkRequestEditComponent,
+          data: {
+            title: 'Edit'
           }
         }
 
